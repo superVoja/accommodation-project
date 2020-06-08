@@ -1,7 +1,7 @@
 <template>
   <section class="container">
-    <h1>Hello world</h1>
-  </section>
+    <h1>Slobodan Smestaj</h1>
+    </section>
 </template>
 
 <script>
