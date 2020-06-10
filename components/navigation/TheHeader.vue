@@ -20,7 +20,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
-  position: fixed;
   background-color: #e1e1e1;
   width: 100vw;
   padding: 15px;

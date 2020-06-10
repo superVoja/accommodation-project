@@ -53,8 +53,8 @@ nav {
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
-    position: relative;
     display: flex;
+    position: relative;
   }
 
   .menu-link {

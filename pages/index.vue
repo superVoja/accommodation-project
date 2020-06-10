@@ -1,4 +1,8 @@
-<template></template>
+<template>
+  <section>
+    <h1>Slobodan Smestaj</h1>
+  </section>
+</template>
 
 <script>
 export default {}

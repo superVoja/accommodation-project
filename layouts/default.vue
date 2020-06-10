@@ -1,6 +1,7 @@
 <template>
   <div>
     <TheHeader />
+
     <nuxt />
   </div>
 </template>
@@ -24,6 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   overflow: hidden;
+  height: 100vh;
 }
 
 *,
