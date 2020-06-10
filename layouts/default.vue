@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader/>
+    <TheHeader />
     <nuxt />
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 <style lang="scss" >
 html,
 body {
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -31,5 +31,6 @@ body {
 *:after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 </style>
