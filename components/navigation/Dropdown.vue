@@ -1,5 +1,5 @@
 <template>
-  <li class="menu-item" @click="isOpen = !isOpen">
+  <li class="menu-item" @click.prevent="isOpen = !isOpen">
     <nuxt-link class="menu-link" to="/rooms">{{title}}</nuxt-link>
     <svg viewBox="0 0 1030 638" width="10px">
       <path
@@ -8,7 +8,7 @@
       />
     </svg>
     <transition name="fade" appear>
-      <ul class="sub-menu" v-show="isOpen">
+      <ul class="sub-menu" v-show="isOpen" >
         <li class="menu-item" v-for="(item, i) in items" :key="i">
           <nuxt-link class="menu-link" :to="item.link">{{item.title}}</nuxt-link>
         </li>

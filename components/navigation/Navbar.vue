@@ -23,11 +23,11 @@ export default {
       items: [
         {
           title: 'Smestaj Katarina',
-          link: '/'
+          link: '/rooms/katarina'
         },
         {
           title: 'Smestaj Luka',
-          link: '/'
+          link: '/rooms/luka'
         }
       ]
     }
