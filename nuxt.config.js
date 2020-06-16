@@ -39,13 +39,14 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['@/plugins/vuelidate', '@/plugins/google-maps'],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/dotenv',
     [
       'nuxt-fontawesome',
       {
@@ -71,5 +72,8 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {}
+  },
+  env: {
+    VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY
   }
 }
