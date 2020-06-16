@@ -1,10 +1,8 @@
 <template>
-  <section>
-    <header>
-      <TheLogo class="logo" />
-      <Navbar class="navbar" />
-    </header>
-  </section>
+  <header>
+    <TheLogo class="logo" />
+    <Navbar class="navbar" />
+  </header>
 </template>
 <script>
 import TheLogo from '@/components/branding/TheLogo'
