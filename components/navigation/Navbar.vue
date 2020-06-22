@@ -49,7 +49,7 @@ nav {
 
   .menu-item {
     padding: 10px 20px;
-    color: #000;
+    color: $font-color;
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
@@ -63,8 +63,8 @@ nav {
   }
   .menu-item.active,
   .menu-item:hover {
-    background-color: #d1d1d1;
-    border-bottom-color: #444;
+    background-color: lighten($color: $main-color, $amount: 5);
+    border-bottom-color: $secondary-color;
   }
 }
 </style>

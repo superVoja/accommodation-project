@@ -45,14 +45,20 @@
       <span class="heading">Pratite nas</span>
       <ul class="social-list">
         <li>
-          <a href="#"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'facebook']" />
+          </a>
         </li>
         <li>
-          <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'instagram']" />
+          </a>
         </li>
-        
+
         <li>
-          <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+          </a>
         </li>
       </ul>
     </div>
@@ -61,11 +67,8 @@
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  background-color: #e1e1e1;
+  background-color: $main-color;
   padding: 25px 40px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   text-align: center;
 
   display: flex;
@@ -87,7 +90,7 @@
     padding: 5px 2px;
   }
   a:hover {
-    border-bottom-color: #444;
+    border-bottom-color: $secondary-color;
   }
   a {
     text-decoration: none;

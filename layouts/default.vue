@@ -19,7 +19,8 @@ export default {
 <style lang="scss" >
 html,
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: $font-color;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -27,8 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 *,

@@ -16,9 +16,14 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Rubik:wght@300;400;500;700&display=swap',
-        rel: 'stylesheet'
+          'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'
       }
     ]
   },
@@ -31,7 +36,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss', '~/assets/scss/colors.scss'],
   styleResources: {
     scss: ['./assets/scss/*.scss', '~assets/scss/_mixins.scss']
   },
