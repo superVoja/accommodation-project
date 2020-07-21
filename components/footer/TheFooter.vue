@@ -32,12 +32,12 @@
       <ul class="phone-list">
         <li>
           <span>Smestaj Katarina</span>
-          <a href="#">062 123 45 67</a>
+          <a href="#" class="non-hover">062 123 45 67</a>
         </li>
 
         <li>
           <span>Smestaj Luka</span>
-          <a href="#">062 123 45 67</a>
+          <a href="#" class="non-hover">062 123 45 67</a>
         </li>
       </ul>
     </div>
@@ -45,18 +45,18 @@
       <span class="heading">Pratite nas</span>
       <ul class="social-list">
         <li>
-          <a href="#">
+          <a href="#" class="non-hover">
             <font-awesome-icon :icon="['fab', 'facebook']" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="non-hover">
             <font-awesome-icon :icon="['fab', 'instagram']" />
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="#" class="non-hover">
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
         </li>
@@ -89,14 +89,18 @@
   li {
     padding: 5px 2px;
   }
-  a:hover {
-    border-bottom-color: $secondary-color;
-  }
+
   a {
     text-decoration: none;
     color: inherit;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
+    &:hover {
+      border-bottom-color: $secondary-color;
+    }
+  }
+  a.non-hover {
+    border: none;
   }
 }
 

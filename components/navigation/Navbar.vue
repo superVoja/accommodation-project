@@ -66,5 +66,8 @@ nav {
     background-color: lighten($color: $main-color, $amount: 5);
     border-bottom-color: $secondary-color;
   }
+  @include media('<=tablet') {
+    display: none;
+  }
 }
 </style>

@@ -80,5 +80,9 @@ module.exports = {
   },
   env: {
     VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY
+  },
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in'
   }
 }

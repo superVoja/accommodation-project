@@ -1,18 +1,33 @@
 <template>
   <div>
-    <TheHeader />
-
+    <TheHeader @menuToggle="displayMenu = !displayMenu" />
+<Menu :show="displayMenu" @close="displayMenu = false"/>
     <nuxt />
     <TheFooter />
   </div>
 </template>
 <script>
 import TheHeader from '@/components/navigation/TheHeader'
+import Menu from '@/components/navigation/Menu'
 import TheFooter from '@/components/footer/TheFooter'
 export default {
   components: {
     TheHeader,
+    Menu,
     TheFooter
+  },
+  data() {
+    return {
+      displayMenu: false
+    }
+  },
+  created() {
+    this.$nuxt.$on('toggle', () => {
+      this.displayMenu = !this.displayMenu
+    })
+    this.$nuxt.$on('close', () => {
+      this.displayMenu = false
+    })
   }
 }
 </script>

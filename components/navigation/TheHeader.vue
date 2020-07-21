@@ -2,17 +2,20 @@
   <header>
     <TheLogo class="logo" />
     <Navbar class="navbar" />
+    <MenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </header>
 </template>
 <script>
 import TheLogo from '@/components/branding/TheLogo'
 import Navbar from '@/components/navigation/Navbar'
 import Dropdown from '@/components/navigation/Dropdown'
+import MenuButton from '@/components/navigation/MenuButton'
 export default {
   components: {
     TheLogo,
     Navbar,
-    Dropdown
+    Dropdown,
+    MenuButton
   }
 }
 </script>
