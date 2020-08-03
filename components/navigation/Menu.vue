@@ -43,11 +43,13 @@ export default {
 .menu-container {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 .menu-backdrop {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: fixed;
+  overflow: hidden;
 }
 
 .menu {
@@ -55,7 +57,7 @@ export default {
   height: 100vh;
   width: 100%;
   background-color: lighten($color: $main-color, $amount: 0.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   box-sizing: border-box;
@@ -77,7 +79,7 @@ export default {
       text-align: right;
     }
     a {
-      color: #111;
+      color: $font-color;
       text-decoration: none;
       display: block;
       margin-top: 2rem;

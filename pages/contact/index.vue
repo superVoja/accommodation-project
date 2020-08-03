@@ -19,11 +19,20 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  height: 100vh;
+  height: 100%;
+  padding: 60px 0;
+
+  @include media('<=phone') {
+    height: 100%;
+  }
 }
 .container {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include media('<desktop') {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

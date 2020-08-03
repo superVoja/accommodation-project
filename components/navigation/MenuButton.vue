@@ -27,9 +27,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #menu-btn {
-  position: fixed;
-  top: 20px;
-  right: 7vw;
   cursor: pointer;
   z-index: 1000;
   display: flex;
@@ -38,7 +35,7 @@ export default {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  color: #111;
+  color: $font-color;
   button:focus {
     outline: none;
   }
@@ -56,7 +53,7 @@ export default {
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     .burger-bar {
-      background-color: #111;
+      background-color: $font-color;
       position: absolute;
       top: 50%;
       right: 6px;

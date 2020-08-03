@@ -1,8 +1,7 @@
 <template>
   <header>
     <TheLogo class="logo" />
-    <Navbar class="navbar" />
-    <MenuButton@toggle="$nuxt.$emit('menuToggle')" />
+    <Navbar class="navbar" /><MenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </header>
 </template>
 <script>
@@ -21,10 +20,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
-  background-color: #e1e1e1;
+  //background-color: #e1e1e1;
+  position: fixed;
   width: 100vw;
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  z-index: 99;
+
+  .logo {
+    z-index: 999;
+  }
 }
 </style>

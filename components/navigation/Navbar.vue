@@ -55,6 +55,8 @@ nav {
     transition: 0.4s;
     display: flex;
     position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
   .menu-link {

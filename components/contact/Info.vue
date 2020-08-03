@@ -52,13 +52,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .contact-info {
-  flex-basis: 50%;
-  max-width: 50%;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include media('<=phone') {
+    border-right: none;
+  }
 }
 
 .info {
@@ -79,6 +81,10 @@ h4 {
 .vue-map-container {
   height: 350px;
   max-width: 992px;
-  width: 450px;
+  width: 350px;
+
+  @include media('<=phone') {
+    max-width: 280px;
+  }
 }
 </style>

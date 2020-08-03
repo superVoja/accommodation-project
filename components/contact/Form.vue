@@ -86,8 +86,6 @@ textarea {
   background: transparent;
 }
 .contact-form {
-  flex-basis: 50%;
-  max-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,7 +104,10 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 590px;
+  max-width: 490px;
+  @include media('<=phone') {
+    width: 280px;
+  }
 
   .input-wrap {
     width: 100%;
