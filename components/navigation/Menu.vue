@@ -4,6 +4,7 @@
 
     <transition name="MENU">
       <div v-if="show" class="menu" @click="$nuxt.$emit('close')">
+        <TheLogo />
         <transition-group name="NAV" tag="ul" appear class="nav-list">
           <li
             v-for="(link, index) in links"
@@ -14,14 +15,17 @@
             <nuxt-link :to="link.route">{{ link.title }}</nuxt-link>
           </li>
         </transition-group>
-        
       </div>
     </transition>
   </div>
 </template>
 <script>
+import TheLogo from '@/components/branding/TheLogo'
 export default {
   name: 'Menu',
+  components:{
+    TheLogo
+  },
   props: {
     show: {
       type: Boolean,

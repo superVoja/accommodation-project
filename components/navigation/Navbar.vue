@@ -39,6 +39,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  &::before {
+    content: '';
+    width: 300px;
+    height: 1px;
+    background: $main-color;
+    position: absolute;
+    top: 0;
+  }
 
   .menu-nav {
     list-style: none;
@@ -49,14 +58,13 @@ nav {
 
   .menu-item {
     padding: 10px 20px;
-    color: $font-color;
+    color: $main-color;
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
     display: flex;
     position: relative;
     font-size: 1.2rem;
-    font-weight: 700;
   }
 
   .menu-link {
@@ -67,6 +75,7 @@ nav {
   .menu-item:hover {
     background-color: lighten($color: $main-color, $amount: 5);
     border-bottom-color: $secondary-color;
+    color: $font-color;
   }
   @include media('<=tablet') {
     display: none;

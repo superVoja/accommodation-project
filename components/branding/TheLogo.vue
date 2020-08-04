@@ -11,10 +11,14 @@
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
   text-transform: lowercase;
-  color: $font-color;
+  color: $main-color;
   font-weight: 900;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
 }
 </style>

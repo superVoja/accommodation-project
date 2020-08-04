@@ -10,6 +10,10 @@
       <div class="btn btn-prev" aria-label="Previous slide" @click="slide(-1)">&#10094;</div>
       <div class="btn btn-next" aria-label="Next slide" @click="slide(1)">&#10095;</div>
     </div>
+    <div id="rooms-section">
+      <nuxt-link to="/rooms/katarina" class="room-btn">Smestaj Katarina</nuxt-link>
+      <nuxt-link to="/rooms/luka" class="room-btn">Smestaj Luka</nuxt-link>
+    </div>
   </section>
 </template>
 
@@ -183,5 +187,30 @@ export default {
 
 .btn:hover {
   transform: scale(1.1);
+}
+
+/* Rooms Section */
+#rooms-section {
+  padding: 60px 0 60px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  a {
+    padding: 100px 200px;
+    border: 1px solid #000;
+    text-align: center;
+
+    color: $font-color;
+    text-decoration: none;
+    margin-right: 10px;
+
+    &:hover {
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
 }
 </style>
