@@ -52,6 +52,7 @@ module.exports = {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/dotenv',
+    '@nuxtjs/prismic',
     [
       'nuxt-fontawesome',
       {
@@ -68,6 +69,11 @@ module.exports = {
       }
     ]
   ],
+  prismic: {
+    endpoint: 'https://slobodan-smestaj.cdn.prismic.io/api/v2',
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer'
+  },
 
   /*
   ** Build configuration

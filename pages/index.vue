@@ -18,35 +18,46 @@
 </template>
 
 <script>
+import Prismic from "prismic-javascript";
+import PrismicDom from "prismic-dom" //importing the Dom
+import PrismicConfig from "./../prismic.config.js";
 export default {
-   
+    async asyncData( params, error, req) {
+    const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req});
+    let rooms = {};
+    const results = await api.getByUID("room", params.uid
+      
+    );
+    rooms = results.results[0]
+    console.log(rooms)
+  },
+
   data() {
-    return{
+    return {
       current: 0,
-    direction: 1,
-    transitionName: "fade",
-    show: false,
-    slides: [
-      { className: "slide-1" },
-      { className: "slide-2" },
-      { className: "slide-3" },
-      
-      
-    ]
+      direction: 1,
+      transitionName: 'fade',
+      show: false,
+      slides: [
+        { className: 'slide-1' },
+        { className: 'slide-2' },
+        { className: 'slide-3' }
+      ]
     }
   },
   methods: {
     slide(dir) {
-      this.direction = dir;
+      this.direction = dir
       dir === 1
-        ? (this.transitionName = "slide-next")
-        : (this.transitionName = "slide-prev");
-      var len = this.slides.length;
-      this.current = (this.current + dir % len + len) % len;
-    }
+        ? (this.transitionName = 'slide-next')
+        : (this.transitionName = 'slide-prev')
+      var len = this.slides.length
+      this.current = (this.current + (dir % len) + len) % len
+    },
+
   },
   mounted() {
-    this.show = true;
+    this.show = true
   }
 }
 </script>
