@@ -5,15 +5,13 @@
     <transition name="MENU">
       <div v-if="show" class="menu" @click="$nuxt.$emit('close')">
         <TheLogo />
-        <transition-group name="NAV" tag="ul" appear class="nav-list">
-          <li
-            v-for="(link, index) in links"
+        <transition-group name="NAV" tag="ul" appear >
+          
+            <nuxt-link tag="li"  v-for="(link, index) in links"
             :key="link.title"
             :style="`--i: ${index}`"
-            class="nav-item"
-          >
-            <nuxt-link :to="link.route">{{ link.title }}</nuxt-link>
-          </li>
+             :to="link.route"><a>{{ link.title }}</a></nuxt-link>
+          
         </transition-group>
       </div>
     </transition>
@@ -22,8 +20,8 @@
 <script>
 import TheLogo from '@/components/branding/TheLogo'
 export default {
-  name: 'Menu',
-  components:{
+  name: 'TheMenu',
+  components: {
     TheLogo
   },
   props: {
@@ -71,14 +69,14 @@ export default {
   justify-content: flex-end;
   overflow: hidden;
 
-  .nav-list {
+  ul {
     list-style: none;
     position: fixed;
     right: 7vw;
     margin: 0;
     padding: 0;
 
-    .nav-item {
+    li {
       padding-top: 0.5rem;
       text-align: right;
     }

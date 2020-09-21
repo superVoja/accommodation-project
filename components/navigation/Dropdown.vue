@@ -37,7 +37,7 @@ export default {
   position: absolute;
   background-color: #e1e1e1;
   color: #000;
-  top: calc(100% + 18px);
+  top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
   width: max-content;

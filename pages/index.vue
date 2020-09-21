@@ -18,20 +18,7 @@
 </template>
 
 <script>
-import Prismic from "prismic-javascript";
-import PrismicDom from "prismic-dom" //importing the Dom
-import PrismicConfig from "./../prismic.config.js";
 export default {
-    async asyncData( params, error, req) {
-    const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req});
-    let rooms = {};
-    const results = await api.getByUID("room", params.uid
-      
-    );
-    rooms = results.results[0]
-    console.log(rooms)
-  },
-
   data() {
     return {
       current: 0,
@@ -53,8 +40,7 @@ export default {
         : (this.transitionName = 'slide-prev')
       var len = this.slides.length
       this.current = (this.current + (dir % len) + len) % len
-    },
-
+    }
   },
   mounted() {
     this.show = true

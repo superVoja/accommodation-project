@@ -1,20 +1,20 @@
 <template>
   <header>
     <TheLogo class="logo" />
-    <Navbar class="navbar" /><MenuButton@toggle="$nuxt.$emit('menuToggle')" />
+    <Navbar class="navbar" /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </header>
 </template>
 <script>
 import TheLogo from '@/components/branding/TheLogo'
 import Navbar from '@/components/navigation/Navbar'
 import Dropdown from '@/components/navigation/Dropdown'
-import MenuButton from '@/components/navigation/MenuButton'
+import TheMenuButton from '@/components/navigation/TheMenuButton'
 export default {
   components: {
     TheLogo,
     Navbar,
     Dropdown,
-    MenuButton
+    TheMenuButton
   }
 }
 </script>
@@ -25,12 +25,13 @@ header {
     rgba(28, 28, 28, 0.7) 0,
     rgba(28, 28, 28, 0) 100%
   );
-  padding-bottom: 50px;
+
   position: fixed;
   width: 100%;
-  //display: grid;
-  //grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
+  height: 4.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   z-index: 99;
 
   .logo {

@@ -1,13 +1,13 @@
 <template>
   <nav>
     <ul class="menu-nav">
-      <li class="menu-item">
-        <nuxt-link class="menu-link" to="/about">O nama</nuxt-link>
-      </li>
+      
+        <nuxt-link tag="li" to="/about"><a>O nama</a></nuxt-link>
+      
       <Dropdown title="Smestaj" :items="items" />
-      <li class="menu-item">
-        <nuxt-link class="menu-link" to="/contact">Kontakt</nuxt-link>
-      </li>
+      
+        <nuxt-link tag="li"  to="/contact"><a>Kontakt</a></nuxt-link>
+      
     </ul>
   </nav>
 </template>
@@ -40,43 +40,49 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
-  &::before {
+  height: 100%;
+  /* &::before {
     content: '';
     width: 300px;
     height: 1px;
     background: $main-color;
     position: absolute;
     top: 0;
-  }
+  } */
 
   .menu-nav {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    height: 100%;
   }
 
-  .menu-item {
+  .menu-nav li {
     padding: 10px 20px;
     color: $main-color;
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     font-size: 1.2rem;
+    height: 100%;
   }
 
-  .menu-link {
+  li a {
     text-decoration: none;
     color: inherit;
+
+    &:active,
+    &:hover {
+      color: $font-color;
+    }
   }
-  .menu-item.active,
-  .menu-item:hover {
-    background-color: lighten($color: $main-color, $amount: 5);
-    border-bottom-color: $secondary-color;
-    color: $font-color;
-  }
+
   @include media('<=tablet') {
     display: none;
   }

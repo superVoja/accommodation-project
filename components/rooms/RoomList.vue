@@ -1,13 +1,20 @@
 <template>
   <section class="room-list">
-    <Room />
+   
   </section>
 </template>
 <script>
-import Room from '@/components/rooms/Room'
+import RoomPreview from '@/components/rooms/RoomPreview'
 export default {
-    components: {
-        Room
-    }
+  components: {
+    RoomPreview
+  }
 }
 </script>
+<style lang="scss" scoped>
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1rem;
+}
+</style>

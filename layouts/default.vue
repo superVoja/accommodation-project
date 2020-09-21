@@ -1,19 +1,19 @@
 <template>
   <div>
     <TheHeader @menuToggle="displayMenu = !displayMenu" />
-<Menu :show="displayMenu" @close="displayMenu = false"/>
+<TheMenu :show="displayMenu" @close="displayMenu = false"/>
     <nuxt />
     <TheFooter />
   </div>
 </template>
 <script>
 import TheHeader from '@/components/navigation/TheHeader'
-import Menu from '@/components/navigation/Menu'
+import TheMenu from '@/components/navigation/TheMenu'
 import TheFooter from '@/components/footer/TheFooter'
 export default {
   components: {
     TheHeader,
-    Menu,
+    TheMenu,
     TheFooter
   },
   data() {
@@ -32,6 +32,13 @@ export default {
 }
 </script>
 <style lang="scss" >
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   font-family: 'Montserrat', sans-serif;
@@ -44,13 +51,5 @@ body {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 </style>
