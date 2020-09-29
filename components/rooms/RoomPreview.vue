@@ -1,23 +1,15 @@
 <template>
-    <nuxt-link :to="id">
-        <figure class="room-preview">
-<img :src="thumbnailUrl" >
-<h2>{{title}}</h2>
-        </figure>
-   </nuxt-link>
+  <nuxt-link :to="id">
+    <figure class="room-preview">
+      <img />
+      <h2>{{title}}</h2>
+    </figure>
+  </nuxt-link>
 </template>
 <script>
 export default {
   props: {
     title: {
-      type: String,
-      required: true
-    },
-    previewText: {
-      type: String,
-      required: true
-    },
-    thumbnailImage: {
       type: String,
       required: true
     },
@@ -36,6 +28,8 @@ a {
 .room-preview {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 16rem;
   height: 36rem;
 

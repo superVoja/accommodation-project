@@ -11,14 +11,17 @@
       <div class="btn btn-next" aria-label="Next slide" @click="slide(1)">&#10095;</div>
     </div>
     <div id="rooms-section">
-      <nuxt-link to="/rooms/katarina" class="room-btn">Smestaj Katarina</nuxt-link>
-      <nuxt-link to="/rooms/luka" class="room-btn">Smestaj Luka</nuxt-link>
+      <Accommodations/>
     </div>
   </section>
 </template>
 
 <script>
+import Accommodations from "@/components/rooms/Accommodations"
 export default {
+  components:{
+    Accommodations
+  },
   data() {
     return {
       current: 0,
@@ -131,29 +134,41 @@ export default {
   }
 
   a {
-    margin-top: 30px;
-    text-decoration: none;
-    color: $main-color;
-    font-size: 1.8rem;
+    margin-top: 25px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1;
     text-transform: uppercase;
-
-    padding: 5px 10px;
-    border: 2px solid $main-color;
+    letter-spacing: 2px;
+    color: $font-color;
+    text-decoration: none;
+    z-index: 999;
+    border: 2px solid $ascending-color;
+    background-color: $ascending-color;
+    border-radius: 7px;
+    padding-top: 18px;
+    padding-right: 32px;
+    padding-bottom: 18px;
+    padding-left: 32px;
+    cursor: pointer;
+    transition: all 0.2 linear;
 
     &:hover {
       text-shadow: 0px 0px 1px #000;
+      background-color: lighten($ascending-color, $amount: 5);
     }
   }
 
   &:before {
     content: '';
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       to top,
       rgba(239, 239, 239, 255),
       rgba(239, 239, 239, 0)
-    );
+    ); */
+    //background-color: rgba(2, 116, 190, 0.2);
     position: absolute;
-    height: 30vh;
+    height: 100vh;
     right: 0;
     bottom: 0;
     left: 0;

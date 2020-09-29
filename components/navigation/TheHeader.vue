@@ -29,8 +29,8 @@ header {
   position: fixed;
   width: 100%;
   height: 4.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
 
   z-index: 99;
 

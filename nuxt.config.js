@@ -52,6 +52,10 @@ module.exports = {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/dotenv',
+    [
+      'storyblok-nuxt',
+      { accessToken: '1IJHyouEUyPgq0VEYIGAnQtt', cacheProvider: 'memory' }
+    ],
 
     [
       'nuxt-fontawesome',

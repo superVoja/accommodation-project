@@ -76,10 +76,12 @@ nav {
   li a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.2s linear;
+    display: inline-block;
 
     &:active,
     &:hover {
-      color: $font-color;
+      color: $ascending-color;
     }
   }
 
