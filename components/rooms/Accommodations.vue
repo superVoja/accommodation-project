@@ -1,5 +1,4 @@
 <template>
-    <section>
         <div class="container">
         
            <figure class="figure figure-katarina">
@@ -29,17 +28,15 @@
              </figcaption>
            </figure>
         </div>
-    </section>
+
 </template>
 <style lang="scss" scoped>
-section {
-  width: 100%;
-  height: 100%;
-}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 figure {

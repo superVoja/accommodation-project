@@ -39,7 +39,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
   height: 100%;
   /* &::before {
     content: '';

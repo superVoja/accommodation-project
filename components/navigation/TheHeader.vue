@@ -26,9 +26,11 @@ header {
     rgba(28, 28, 28, 0) 100%
   );
 
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 4.5rem;
+  //height: 4.5rem;
   //display: grid;
   //grid-template-columns: 1fr 1fr;
 

@@ -26,7 +26,8 @@ export default {
 <style lang="scss" scoped>
 /* FADE IN */
 
-/* Rooms Section */
+/* Main Section */
+
 #main {
   height: 100vh;
   width: 100%;
@@ -47,7 +48,7 @@ export default {
     height: 100%;
     width: 100%;
     background-color: transparent;
-    background-image: linear-gradient(135deg, #0b212b 0%, #1d394b 100%);
+    background-image: linear-gradient(135deg, #193d4e 0%, #1d394b 100%);
     opacity: 0.7;
   }
   .main-content {
@@ -92,8 +93,9 @@ export default {
     }
   }
 }
+/*Rooms Section*/
 #rooms {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 }
 </style>
