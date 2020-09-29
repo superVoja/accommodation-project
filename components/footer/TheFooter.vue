@@ -67,7 +67,7 @@
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  background-color: $main-color;
+  background-color: $secondary-color;
   padding: 25px 40px;
   text-align: center;
 
@@ -75,7 +75,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   align-items: center;
-
+  .heading {
+    color: $font-light;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -94,11 +96,11 @@
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: $font-light;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
     &:hover {
-      border-bottom-color: $secondary-color;
+      border-bottom-color: $ascending-color;
     }
   }
   a.non-hover {

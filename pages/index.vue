@@ -52,12 +52,12 @@ export default {
     opacity: 0.7;
   }
   .main-content {
-    color: $main-color;
+    color: $font-dark;
     z-index: 99;
     text-align: center;
 
     h1 {
-      color: #ffffff;
+      color: $font-dark;
       letter-spacing: 4px;
       line-height: 1.5;
       text-transform: uppercase;
@@ -71,7 +71,7 @@ export default {
       padding-bottom: 2rem;
     }
     a {
-      color: $font-color;
+      color: $font-dark;
       text-decoration: none;
       border-color: $ascending-color;
       background-color: $ascending-color;
@@ -95,7 +95,6 @@ export default {
 }
 /*Rooms Section*/
 #rooms {
-  height: 50vh;
   width: 100%;
 }
 </style>

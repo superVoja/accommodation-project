@@ -35,7 +35,7 @@ export default {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  color: $main-color;
+  color: $font-light;
   button:focus {
     outline: none;
   }

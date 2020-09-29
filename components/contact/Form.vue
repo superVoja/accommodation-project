@@ -121,7 +121,7 @@ textarea {
     width: 100%;
     padding: 0.2rem;
     line-height: 1.2;
-    color: $font-color;
+    color: $font-dark;
     font-family: 'Montserrat';
     font-size: 17px;
   }
@@ -134,7 +134,7 @@ textarea {
 
   .button {
     background: #818f87;
-    color: #fff;
+    color: $font-light;
     border-radius: 7px;
     box-shadow: 0 5px #818f87;
     padding: 10px 30px 10px 30px;

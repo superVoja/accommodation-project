@@ -35,8 +35,8 @@ export default {
 
 .menu-item .sub-menu {
   position: absolute;
-  background-color: #e1e1e1;
-  color: #000;
+  background-color: $main-color;
+  color: $font-dark;
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
@@ -44,7 +44,11 @@ export default {
   border-radius: 0px 0px 16px 16px;
 
   .menu-link {
-    color: #000;
+    color: $font-dark;
+
+    &:hover {
+      color: $ascending-color;
+    }
   }
 }
 

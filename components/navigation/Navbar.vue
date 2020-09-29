@@ -61,7 +61,7 @@ nav {
 
   .menu-nav li {
     padding: 10px 20px;
-    color: $main-color;
+    color: $font-light;
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;

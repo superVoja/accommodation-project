@@ -81,7 +81,7 @@ export default {
       text-align: right;
     }
     a {
-      color: $font-color;
+      color: $font-dark;
       text-decoration: none;
       display: block;
       margin-top: 2rem;

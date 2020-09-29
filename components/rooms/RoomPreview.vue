@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 a {
   text-decoration: none;
-  color: $font-color;
+  color: $font-dark;
 }
 .room-preview {
   display: flex;
@@ -39,7 +39,7 @@ a {
   }
 
   h2 {
-    color: $font-color;
+    color: $font-dark;
     text-align: center;
 
     font-size: 1.4rem;

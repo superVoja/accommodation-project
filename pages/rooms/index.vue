@@ -1,23 +1,52 @@
 <template>
   <section class="container">
-    <nuxt-link to="/rooms/katarina" class="room-btn">Smestaj Katarina</nuxt-link>
-    <nuxt-link to="/rooms/luka" class="room-btn">Smestaj Luka</nuxt-link>
+    <div class="content">
+      <h2>Izaberite Smestaj</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatum? Dolores sint minima obcaecati praesentium distinctio? Ipsa commodi exercitationem expedita nisi hic eius facere sint officiis dolorem consequatur. Molestias, repellat.</p>
+    <h2>Pogodnosti</h2>
+    <p>Sve smestajne jedinice</p>
+    <div class="amenities">
+      <img src="" alt="Free Parcking">
+      <img src="" alt="Free WiFi">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+    </div>
+    <Accommodations/>
   </section>
 </template>
 <script>
-import RoomPreview from '@/components/rooms/RoomPreview'
+import Accommodations from '@/components/rooms/Accommodations'
 export default {
   components: {
-    RoomPreview
+    Accommodations
   },
   
 }
 </script>
 <style lang="scss" scoped>
 .container {
-  margin-top: 6rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  margin-top: 8rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 2.3rem;
+  }
+  p {
+    display: block;
+    width: 600px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
 }
 </style>

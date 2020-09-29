@@ -37,7 +37,7 @@ article {
     line-height: 1em;
     max-width: 560px;
     margin: 1em 0 1.6em;
-    color: $font-color;
+    color: $font-dark;
     font-family: 'Playfair Display';
 
     &:after {
@@ -45,12 +45,12 @@ article {
       display: block;
       width: 60px;
       margin: 15px 0 0;
-      border-bottom: 3px solid $font-color;
+      border-bottom: 3px solid $font-dark;
     }
   }
 
   p {
-    color: #999;
+    color: $font-dark;
     font-size: 16px;
     line-height: 1.6em;
     margin: 0 0 1.6em;
@@ -60,7 +60,7 @@ article {
     line-height: 1em;
     max-width: 560px;
     margin: 1em 0 1.6em;
-    color: $font-color;
+    color: $font-dark;
     font-family: 'Playfair Display';
 
     &:after {
@@ -68,7 +68,7 @@ article {
       display: block;
       width: 60px;
       margin: 15px 0 0;
-      border-bottom: 3px solid $font-color;
+      border-bottom: 3px solid $font-dark;
     }
   }
 }

@@ -1,7 +1,8 @@
 <template>
-        <div class="container">
-        
-           <figure class="figure figure-katarina">
+        <section>  
+           <h1>Izaberite smestaj</h1>
+           <div class="accommodations">
+             <figure class="figure figure-katarina">
              <img src="@/assets/images/slide_1.JPG" alt="Katarina Thumbnail">
              <figcaption>
                <div>
@@ -27,16 +28,27 @@
                 <nuxt-link to="/rooms/luka">Vidi Smestaj </nuxt-link>
              </figcaption>
            </figure>
-        </div>
-
+           </div>
+        </section>
 </template>
 <style lang="scss" scoped>
-.container {
+section {
+  height: 70vh;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.accommodations {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 figure {
@@ -61,7 +73,7 @@ figure img {
 }
 figure figcaption {
   padding: 2em;
-  color: #fff;
+  color: $font-light;
   text-transform: uppercase;
   font-size: 1.25em;
   -webkit-backface-visibility: hidden;
@@ -97,8 +109,11 @@ figure p {
   letter-spacing: 1px;
   font-size: 68.5%;
 }
-figure {
+.figure-luka {
   background: #18a367;
+}
+.figure-katarina {
+  background: $ascending-color;
 }
 figure img {
   height: 390px;
@@ -117,8 +132,8 @@ figure figcaption::before {
   right: 30px;
   bottom: 50px;
   left: 30px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid $font-light;
+  border-bottom: 1px solid $font-light;
   -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
   -webkit-transform-origin: 0 0;
@@ -129,8 +144,8 @@ figure figcaption::after {
   right: 50px;
   bottom: 30px;
   left: 50px;
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
+  border-right: 1px solid $font-light;
+  border-left: 1px solid $font-light;
   -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
   -webkit-transform-origin: 100% 0;
