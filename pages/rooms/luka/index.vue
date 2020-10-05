@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <h1>Luka</h1>
-    <RoomList :rooms="loadedRooms"
-     
-    />
-  </div>
+  <section>
+    <h1>Smesataj Luka</h1>
+    <RoomList :rooms="loadedRooms"/></section>
 </template>
 <script>
 import RoomList from '@/components/rooms/RoomList'
@@ -27,3 +24,9 @@ RoomList
   
 }
 </script>
+<style lang="scss" scoped>
+section {
+  padding-top: 4rem;
+  height: 100vh;
+}
+</style>

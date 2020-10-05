@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  height: 100%;
+  height: 100vh;
   padding: 60px 0;
 
   @include media('<=phone') {

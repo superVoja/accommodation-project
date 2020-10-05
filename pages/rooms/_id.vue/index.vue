@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>{{title}}</h1>
-    </div>
+    <section>
+
+    </section>
 </template>
 <script>
 export default {
@@ -18,3 +18,8 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+section {
+  height: 100vh;
+}
+</style>

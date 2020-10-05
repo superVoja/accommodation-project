@@ -3,7 +3,7 @@
     <div class="form-heading">
       <h1>Pisite nam</h1>
     </div>
-    <form action class="input-form" @submit.prevent="submit">
+    <form action="POST" class="input-form" @submit.prevent="submit">
       <div class="input-wrap validate-input" data-validate="Name is required">
         <input type="text" class="input" placeholder="Name" v-model.trim="$v.name.$model" />
 
@@ -38,6 +38,7 @@
           <span class="error" v-if="!$v.message.required"></span>
         </div>
       </div>
+      
       <button class="button" type="submit">Posalji poruku</button>
     </form>
   </div>
@@ -104,7 +105,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 490px;
+  width: 490px;
   @include media('<=phone') {
     width: 280px;
   }
@@ -133,8 +134,9 @@ textarea {
   }
 
   .button {
-    background: #818f87;
-    color: $font-light;
+    border-color: $ascending-color;
+    background-color: $ascending-color;
+    color: $font-dark;
     border-radius: 7px;
     box-shadow: 0 5px #818f87;
     padding: 10px 30px 10px 30px;
@@ -144,8 +146,12 @@ textarea {
     outline: none;
     border: none;
     text-align: center;
-    font-family: 'Playfair Display';
+
     cursor: pointer;
+
+    &:hover {
+      background-color: lighten($color: $ascending-color, $amount: 5);
+    }
   }
 }
 

@@ -52,12 +52,12 @@ export default {
     opacity: 0.7;
   }
   .main-content {
-    color: $font-dark;
+    color: $font-light;
     z-index: 99;
     text-align: center;
 
     h1 {
-      color: $font-dark;
+      color: $font-light;
       letter-spacing: 4px;
       line-height: 1.5;
       text-transform: uppercase;

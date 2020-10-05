@@ -70,6 +70,7 @@
   background-color: $secondary-color;
   padding: 25px 40px;
   text-align: center;
+  color: $font-light;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -20,11 +20,6 @@ const createStore = () => {
             starts_with: 'rooms/'
           })
           .then(res => {
-            const rooms = []
-            for (const key in res.data) {
-              rooms.push({ ...res.data[key], id: key })
-            }
-            console.log(res.data)
             vuexContext.commit('setRooms', res.data.stories)
           })
       }

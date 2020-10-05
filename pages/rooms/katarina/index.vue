@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <h1>Katarina</h1>
+  <section>
+    <h1>Smestaj katarina</h1>
     <RoomList :rooms="loadedRooms"
      
     />
-    <nuxt-child></nuxt-child>
-  </div>
+  </section>
 </template>
 <script>
 import RoomList from '@/components/rooms/RoomList'
@@ -31,3 +30,10 @@ RoomList
   
 }
 </script>
+<style lang="scss" scoped>
+section {
+  padding-top: 4rem;
+
+  height: 100vh;
+}
+</style>
