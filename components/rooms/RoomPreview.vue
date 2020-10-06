@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="id">
     <figure class="room-preview">
-      <img />
+      <img :src="thumbnail" />
       <h2>{{title}}</h2>
     </figure>
   </nuxt-link>
@@ -14,6 +14,10 @@ export default {
       required: true
     },
     id: {
+      type: String,
+      required: true
+    },
+    thumbnail:{
       type: String,
       required: true
     }

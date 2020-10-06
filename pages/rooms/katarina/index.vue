@@ -4,13 +4,15 @@
     <RoomList :rooms="loadedRooms"
      
     />
+   
   </section>
 </template>
 <script>
 import RoomList from '@/components/rooms/RoomList'
+
 export default {
   components:{
-RoomList
+RoomList,
   },
   computed:{
     loadedRooms(){
@@ -19,7 +21,8 @@ RoomList
         return {
           
           id:bp.slug,
-          title: bp.content.title
+          title: bp.content.title,
+          thumbnail: bp.content.thumbnail,
         }
       })
       

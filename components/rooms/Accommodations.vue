@@ -111,9 +111,11 @@ figure p {
 }
 .figure-luka {
   background: #18a367;
+  //border: 3px solid #18a367;
 }
 .figure-katarina {
-  background: $ascending-color;
+  background: #c23b22;
+  //border: 3px solid #c70039;
 }
 figure img {
   height: 390px;
@@ -172,7 +174,7 @@ figure img,
 figure figcaption::before,
 figure figcaption::after,
 figure p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 figure:hover img {
