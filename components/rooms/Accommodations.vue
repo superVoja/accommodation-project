@@ -3,7 +3,7 @@
            <h1>Izaberite smestaj</h1>
            <div class="accommodations">
              <figure class="figure figure-katarina">
-             <img src="@/assets/images/slide_1.JPG" alt="Katarina Thumbnail">
+             <img src="@/assets/images/katarina-thumbnail.jpg" alt="Katarina Thumbnail">
              <figcaption>
                <div>
                   <h2>

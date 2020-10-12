@@ -7,13 +7,11 @@
 <script>
 import TheLogo from '@/components/branding/TheLogo'
 import Navbar from '@/components/navigation/Navbar'
-import Dropdown from '@/components/navigation/Dropdown'
 import TheMenuButton from '@/components/navigation/TheMenuButton'
 export default {
   components: {
     TheLogo,
     Navbar,
-    Dropdown,
     TheMenuButton
   }
 }

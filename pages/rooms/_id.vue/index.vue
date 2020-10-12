@@ -40,7 +40,17 @@ export default {
             res.data.story.content.img_4,
             res.data.story.content.img_5,
             res.data.story.content.img_6,
-            res.data.story.content.img_7
+            res.data.story.content.img_7,
+            res.data.story.content.img_8,
+            res.data.story.content.img_9,
+            res.data.story.content.img_10,
+            res.data.story.content.img_11,
+            res.data.story.content.img_12,
+            res.data.story.content.img_13,
+            res.data.story.content.img_14,
+            res.data.story.content.img_15,
+            res.data.story.content.img_16,
+            res.data.story.content.img_17
           ],
           index: null
         }
@@ -85,8 +95,6 @@ export default {
   }
   h3 {
     padding: 1rem 0;
-  }
-  p {
   }
 }
 .images {

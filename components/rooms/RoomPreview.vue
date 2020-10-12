@@ -131,6 +131,7 @@ a {
     }
   }
 }
+/* 
 .card:hover,
 .card:focus-within {
   align-items: center;
@@ -205,7 +206,7 @@ a {
       transition-duration: 0s;
     }
   }
-}
+} */
 .room-preview {
   display: flex;
   flex-direction: column;

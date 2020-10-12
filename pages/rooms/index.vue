@@ -6,12 +6,14 @@
     <h2>Pogodnosti</h2>
     <p>Sve smestajne jedinice</p>
     <div class="amenities">
-      <img src="" alt="Free Parcking">
-      <img src="" alt="Free WiFi">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+      <img src="@/assets/images/freeParking.png" alt="Free Parcking" title="Besplatan Parking">
+      <img src="@/assets/images/freeWiFi.png" alt="Free WiFi" title="Besplatan WiFi">
+      <img src="@/assets/images/outdoorSpace.png" alt="Outdoor Space" title="Bašta">
+      <img src="@/assets/images/bathroom.png" alt="Bathroom" title="Kupatilo">
+      <img src="@/assets/images/airConditioner.png" alt="Air Conditioner" title="Klima">
+      <img src="@/assets/images/kitchen.png" alt="Kitchen" title="Kuhinja">
+      <img src="@/assets/images/bedroom.png" alt="Bedroom" title="Spavaća Soba">
+      <img src="@/assets/images/TV.png" alt="TV" title="TV">
     </div>
     </div>
     <Accommodations/>
@@ -22,14 +24,12 @@ import Accommodations from '@/components/rooms/Accommodations'
 export default {
   components: {
     Accommodations
-  },
-  
+  }
 }
 </script>
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  height: 100vh;
   margin-top: 8rem;
 }
 .content {
@@ -47,6 +47,17 @@ export default {
     padding-bottom: 2rem;
     padding-top: 2rem;
     text-align: center;
+  }
+
+  .amenities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      padding: 0 1rem;
+      width: 100%;
+    }
   }
 }
 </style>

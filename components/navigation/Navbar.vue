@@ -3,35 +3,15 @@
     <ul class="menu-nav">
       
         <nuxt-link tag="li" to="/about"><a>O nama</a></nuxt-link>
-      
-      <Dropdown title="Smestaj" :items="items" />
-      
+        <nuxt-link tag="li" to="/rooms"><a>Smestaj</a></nuxt-link>
         <nuxt-link tag="li"  to="/contact"><a>Kontakt</a></nuxt-link>
       
     </ul>
   </nav>
 </template>
 <script>
-import Dropdown from '@/components/navigation/Dropdown'
 export default {
-  name: 'navbar',
-  components: {
-    Dropdown
-  },
-  data() {
-    return {
-      items: [
-        {
-          title: 'Smestaj Katarina',
-          link: '/rooms/katarina'
-        },
-        {
-          title: 'Smestaj Luka',
-          link: '/rooms/luka'
-        }
-      ]
-    }
-  }
+  name: 'navbar'
 }
 </script>
 <style lang="scss">
