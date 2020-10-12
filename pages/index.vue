@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import Accommodations from "@/components/rooms/Accommodations"
+import Accommodations from '@/components/rooms/Accommodations'
 export default {
-  components:{
+  components: {
     Accommodations
-  },
+  }
 }
 </script>
 
@@ -53,6 +53,7 @@ export default {
   }
   .main-content {
     color: $font-light;
+    font-family: $lora-font;
     z-index: 99;
     text-align: center;
 
@@ -69,13 +70,15 @@ export default {
       font-weight: 500;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      font-family: $ubuntu-font;
     }
     a {
       color: $font-dark;
+      font-family: $ubuntu-font;
       text-decoration: none;
       border-color: $ascending-color;
       background-color: $ascending-color;
-      font-family: inherit;
+
       font-weight: 600;
       line-height: 1;
       text-transform: uppercase;
