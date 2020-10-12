@@ -20,8 +20,8 @@ export default {
 header {
   background: linear-gradient(
     to bottom,
-    rgba(28, 28, 28, 0.7) 0,
-    rgba(28, 28, 28, 0) 100%
+    rgba(25, 61, 78, 0.7) 0,
+    rgba(23, 54, 69, 0) 100%
   );
 
   position: absolute;

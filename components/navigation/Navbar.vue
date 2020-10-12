@@ -50,7 +50,8 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
     height: 100%;
   }
 
