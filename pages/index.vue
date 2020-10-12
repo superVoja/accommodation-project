@@ -65,6 +65,10 @@ export default {
       text-transform: uppercase;
       font-size: 4rem;
       font-weight: 700;
+
+      @include media('<=tablet') {
+        font-size: 2rem;
+      }
     }
     h5 {
       font-size: 1.25rem;
@@ -97,6 +101,7 @@ export default {
     }
   }
 }
+
 /*Rooms Section*/
 #rooms {
   width: 100%;

@@ -35,7 +35,6 @@
 </template>
 <style lang="scss" scoped>
 section {
-  height: 70vh;
   width: 100%;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -53,6 +52,9 @@ section {
     position: relative;
     display: inline-block;
     font-family: $ubuntu-font;
+    @include media('<=tablet') {
+      font-size: 2rem;
+    }
 
     &::after {
       content: '';
@@ -73,6 +75,9 @@ section {
   justify-content: center;
   align-items: center;
   padding-top: 4rem;
+  @include media('<=tablet') {
+    flex-direction: column;
+  }
 }
 
 figure {

@@ -41,20 +41,27 @@ export default {
   h2 {
     font-size: 2.3rem;
     font-family: $ubuntu-font;
+    @include media('<=tablet') {
+      font-size: 2rem;
+    }
   }
   p {
     display: block;
-    width: 600px;
+    max-width: 600px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 2rem;
     padding-top: 2rem;
     text-align: center;
   }
 
   .amenities {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    @include media('<=tablet') {
+      grid-template-columns: 1fr 1fr;
+    }
     img {
       padding: 0 1rem;
       width: 100%;

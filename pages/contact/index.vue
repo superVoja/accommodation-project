@@ -19,11 +19,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  height: 100vh;
-  padding: 60px 0;
+  padding: 6rem 0;
 
-  @include media('<=phone') {
+  @include media('<=tablet') {
     height: 100%;
+    //margin-top: 6rem;
   }
 }
 .container {
