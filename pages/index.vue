@@ -59,6 +59,7 @@ export default {
 
     h1 {
       color: $font-light;
+      font-family: $ubuntu-font;
       letter-spacing: 4px;
       line-height: 1.5;
       text-transform: uppercase;

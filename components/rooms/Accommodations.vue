@@ -1,6 +1,8 @@
 <template>
         <section>  
-           <h1>Izaberite smestaj</h1>
+           <div class="heading">
+             <h1>Izaberite smestaj</h1>
+           </div>
            <div class="accommodations">
              <figure class="figure figure-katarina">
              <img src="@/assets/images/katarina-thumbnail.jpg" alt="Katarina Thumbnail">
@@ -16,7 +18,7 @@
              </figcaption>
            </figure>
            <figure class="figure figure-luka">
-             <img src="@/assets/images/slide_1.JPG" alt="Luka Thumbnail">
+             <img src="@/assets/images/luka-thumbnail.jpg" alt="Luka Thumbnail">
              <figcaption>
                <div>
                  <h2>
@@ -37,11 +39,32 @@ section {
   width: 100%;
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   h1 {
     text-align: center;
     font-size: 2.3rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+    font-family: $ubuntu-font;
+
+    &::after {
+      content: '';
+      width: 20%;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: $ascending-color;
+    }
   }
 }
 
@@ -49,6 +72,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 4rem;
 }
 
 figure {

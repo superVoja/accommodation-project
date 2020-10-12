@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="content">
-      <h2>Izaberite Smestaj</h2>
+      <h2>Smestaj U Sokobanji</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatum? Dolores sint minima obcaecati praesentium distinctio? Ipsa commodi exercitationem expedita nisi hic eius facere sint officiis dolorem consequatur. Molestias, repellat.</p>
     <h2>Pogodnosti</h2>
     <p>Sve smestajne jedinice</p>
@@ -40,6 +40,7 @@ export default {
 
   h2 {
     font-size: 2.3rem;
+    font-family: $ubuntu-font;
   }
   p {
     display: block;

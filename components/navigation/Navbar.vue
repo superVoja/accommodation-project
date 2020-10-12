@@ -42,6 +42,7 @@ nav {
   .menu-nav li {
     padding: 10px 20px;
     color: $font-light;
+    font-family: $ubuntu-font;
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;

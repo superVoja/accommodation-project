@@ -45,12 +45,7 @@ export default {
             res.data.story.content.img_9,
             res.data.story.content.img_10,
             res.data.story.content.img_11,
-            res.data.story.content.img_12,
-            res.data.story.content.img_13,
-            res.data.story.content.img_14,
-            res.data.story.content.img_15,
-            res.data.story.content.img_16,
-            res.data.story.content.img_17
+            res.data.story.content.img_12
           ],
           index: null
         }
