@@ -8,6 +8,7 @@
      :thumbnail="room.thumbnail"
       :id="room.id"
       class="list-item"
+      
     />
     </transition-group>
   </section>

@@ -31,7 +31,7 @@ export default {
 #main {
   height: 100vh;
   width: 100%;
-  background-image: url('../assets/images/slide_3.jpg');
+  background-image: url('../assets/images/background.jpg');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
