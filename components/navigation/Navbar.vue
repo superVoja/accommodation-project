@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <ul class="menu-nav">
       
         <nuxt-link tag="li" to="/about"><a>O nama</a></nuxt-link>
@@ -15,12 +15,15 @@ export default {
 }
 </script>
 <style lang="scss">
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  top: 0;
+  left: 0;
+  //background: #fff;
   height: 100%;
+  z-index: 99;
   /* &::before {
     content: '';
     width: 300px;
@@ -41,8 +44,8 @@ nav {
 
   .menu-nav li {
     padding: 10px 20px;
-    color: $font-light;
-    font-family: $ubuntu-font;
+    //color: inherit;
+
     text-align: center;
     border-bottom: 3px solid transparent;
     transition: 0.4s;
@@ -50,18 +53,25 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: 1.4rem;
-    font-weight: 400;
+
     height: 100%;
+
+    &.nuxt-link-active,
+    .nuxt-link-exact-active {
+      color: $ascending-color;
+    }
   }
 
   li a {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: $ubuntu-font;
     color: inherit;
     transition: all 0.2s linear;
     display: inline-block;
 
-    &:active,
     &:hover {
       color: $ascending-color;
     }

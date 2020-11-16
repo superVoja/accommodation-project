@@ -17,6 +17,8 @@
 <script>
 import Accommodations from '@/components/rooms/Accommodations'
 export default {
+  name: 'homepage',
+  layout: 'homepage',
   components: {
     Accommodations
   }
@@ -36,7 +38,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
+  //position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +56,7 @@ export default {
   .main-content {
     color: $font-light;
     font-family: $lora-font;
-    z-index: 99;
+    z-index: 10;
     text-align: center;
 
     h1 {

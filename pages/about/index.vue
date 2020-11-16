@@ -16,6 +16,12 @@
     </article>
   </section>
 </template>
+<script>
+export default {
+  name: 'about',
+  layout: 'default'
+}
+</script>
 <style lang="scss" scoped>
 section {
   min-height: 100vh;

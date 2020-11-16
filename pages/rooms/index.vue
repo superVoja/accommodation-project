@@ -22,6 +22,8 @@
 <script>
 import Accommodations from '@/components/rooms/Accommodations'
 export default {
+  name: 'rooms',
+  layout: 'default',
   components: {
     Accommodations
   }

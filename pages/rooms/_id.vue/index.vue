@@ -62,7 +62,7 @@ export default {
 #room {
   height: 100%;
   width: 100%;
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 8rem;
   padding-left: 4rem;
   padding-right: 4rem;

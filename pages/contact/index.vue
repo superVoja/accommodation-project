@@ -11,6 +11,8 @@ import { required, email } from 'vuelidate/lib/validators'
 import Info from '@/components/contact/Info'
 import Form from '@/components/contact/Form'
 export default {
+  name: 'contact',
+  layout: 'default',
   components: {
     Info,
     Form

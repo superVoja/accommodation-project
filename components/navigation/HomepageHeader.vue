@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header  :class="{scrolling: scrollPosition > 100}">
     <TheLogo class="logo" />
     <Navbar class="navbar" /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </header>
@@ -9,19 +9,31 @@ import TheLogo from '@/components/branding/TheLogo'
 import Navbar from '@/components/navigation/Navbar'
 import TheMenuButton from '@/components/navigation/TheMenuButton'
 export default {
-  name: 'header',
+  name: 'homepageheader',
   components: {
     TheLogo,
     Navbar,
     TheMenuButton
+  },
+  data() {
+    return {
+      scrollPosition: null
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleTopBar)
+  },
+  methods: {
+    handleTopBar() {
+      this.scrollPosition = window.scrollY
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
 header {
-  background: #fff;
-  color: $font-dark;
-  box-shadow: 0 5px 10px hsla(0, 0%, 79.2%, 0.4);
+  background: transparent;
+  color: $font-light;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,5 +47,11 @@ header {
   .logo {
     z-index: 999;
   }
+}
+.scrolling {
+  background-color: #fff;
+  transition: 0.3s ease-in;
+  box-shadow: 0 5px 10px hsla(0, 0%, 79.2%, 0.4);
+  color: $font-dark;
 }
 </style>
