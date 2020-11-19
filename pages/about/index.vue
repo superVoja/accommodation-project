@@ -1,20 +1,19 @@
 <template>
-  <section>
-    <article>
-      <div class="container">
-        <h1 class="heading">O nama</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
+    <section>
+     <div class="container">
+ <div class="about">
+        <h2 class="about-heading">Naša priča</h2>
+        <div class="about-content">
+          <p class="about-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor aliquid explicabo labore eaque sint laudantium excepturi nisi error fuga, incidunt veniam repellendus corporis nam dolorem magni perspiciatis deserunt. Soluta quas minus numquam labore cupiditate dolorum rem dicta quidem assumenda adipisci!
+        </p>
+        <div class="image">
+          <img src="~/assets/images/gardan_0.jpg" alt="">
+        </div>
+        </div>
       </div>
-      <div class="container">
-        <h2 class="sub-heading">U nasoj blizini</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia voluptatibus voluptate perspiciatis, nobis culpa similique sed maxime aut molestias quis voluptatem voluptas aliquid, accusantium nulla odit rerum accusamus? Veritatis.</p>
-      </div>
-    </article>
-  </section>
+     </div>
+    </section>
 </template>
 <script>
 export default {
@@ -23,9 +22,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-section {
-  min-height: 100vh;
-}
 .container {
   width: 100%;
   max-width: 1360px;
@@ -35,10 +31,10 @@ section {
   box-sizing: border-box;
 }
 
-article {
-  padding: 4rem 0;
+.about {
+  padding: 6rem 0;
 
-  .heading {
+  .about-heading {
     font-size: 40px;
     line-height: 1em;
     max-width: 560px;
@@ -51,31 +47,28 @@ article {
       display: block;
       width: 60px;
       margin: 15px 0 0;
-      border-bottom: 3px solid $font-dark;
+      border-bottom: 3px solid $ascending-color;
     }
   }
-
-  p {
+  .about-content {
+    display: flex;
+  }
+  .about-text {
     color: $font-dark;
     font-family: $lora-font;
     font-size: 16px;
     line-height: 1.6em;
     margin: 0 0 1.6em;
+    flex-basis: 60%;
   }
-  .sub-heading {
-    font-size: 30px;
-    line-height: 1em;
-    max-width: 560px;
-    margin: 1em 0 1.6em;
-    color: $font-dark;
-    font-family: $ubuntu-font;
 
-    &:after {
-      content: '';
-      display: block;
-      width: 60px;
-      margin: 15px 0 0;
-      border-bottom: 3px solid $font-dark;
+  .image {
+    max-width: 750px;
+    flex-basis: 40%;
+
+    img {
+      width: 100%;
+      //opacity: 0.8;
     }
   }
 }
