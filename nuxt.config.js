@@ -94,10 +94,11 @@ module.exports = {
     extend(config, ctx) {}
   },
   env: {
-    VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY
+    VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
+    NODEMAILER_PASSWORD: process.env.NODEMAILER_PASSWORD
   },
   pageTransition: {
     name: 'fade',
     mode: 'out-in'
-  }
+  },
 }

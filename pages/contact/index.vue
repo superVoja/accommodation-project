@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 section {
   padding: 6rem 0;
-
+  background-attachment: fixed;
   @include media('<=tablet') {
     height: 100%;
     //margin-top: 6rem;
@@ -32,9 +32,11 @@ section {
   width: 100%;
   height: 100%;
   display: grid;
+  background-attachment: fixed;
   grid-template-columns: 1fr 1fr;
   @include media('<desktop') {
     grid-template-columns: 1fr;
   }
+  padding-top: 8rem;
 }
 </style>

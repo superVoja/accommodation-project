@@ -1,15 +1,14 @@
 <template>
-  <header>
+  <div class="header">
     <TheLogo class="logo" />
     <Navbar class="navbar" /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
-  </header>
+  </div>
 </template>
 <script>
 import TheLogo from '@/components/branding/TheLogo'
 import Navbar from '@/components/navigation/Navbar'
 import TheMenuButton from '@/components/navigation/TheMenuButton'
 export default {
-  name: 'header',
   components: {
     TheLogo,
     Navbar,
@@ -18,7 +17,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-header {
+.header {
   background: #fff;
   color: $font-dark;
   box-shadow: 0 5px 10px hsla(0, 0%, 79.2%, 0.4);

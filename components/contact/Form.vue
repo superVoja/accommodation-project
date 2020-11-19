@@ -3,12 +3,20 @@
     <div class="form-heading">
       <h1>Pisite nam</h1>
     </div>
-    <form action="POST" class="input-form" @submit.prevent="submit">
-      <div class="input-wrap validate-input" data-validate="Name is required">
-        <input type="text" class="input" placeholder="Name" v-model.trim="$v.name.$model" />
-
-        <div v-if="$v.name.$dirty">
-          <span class="error" v-if="!$v.name.required"></span>
+    <form method="POST" action="submit" @submit="submit()" class="input-form">
+      <div class="input-wrap validate-input" 
+      data-validate="Name is required"
+      >
+        <input 
+          type="text" 
+          class="input"
+          name="name" 
+          placeholder="Name" 
+          v-model="name"
+          @input="$v.name.$touch"
+        />
+        <div>
+          <span class="error" v-if="!$v.name.required && $v.name.$dirty" data-placeholder="NAME"></span>
         </div>
       </div>
       <div class="input-wrap validate-input" data-validate="Valid email is required: ex@adc.xyz">
@@ -20,26 +28,25 @@
           autocomplete="off"
           v-model.trim="$v.email.$model"
         />
-        <div v-if="$v.email.$dirty">
-          <span class="error" v-if="!$v.email.required"></span>
+        <div >
+          <span class="error" v-if="!$v.email.required && $v.email.$dirty"   data-placeholder="EMAIL"></span>
         </div>
       </div>
       <div class="input-wrap validate-input" data-validate="Message is required.">
         <textarea
-          name
-          id
           cols="30"
           rows="10"
           placeholder="Message"
           class="input"
+          name="message"
           v-model.trim="$v.message.$model"
         ></textarea>
-        <div v-if="$v.message.$dirty">
-          <span class="error" v-if="!$v.message.required"></span>
+        <div>
+          <span class="error" data-placeholder="MESSAGE" v-if="!$v.message.required && $v.message.$dirty"></span>
         </div>
       </div>
       
-      <button class="button" type="submit">Posalji poruku</button>
+      <button class="button" type="send" >Posalji poruku</button>
     </form>
   </div>
 </template>
@@ -49,25 +56,31 @@ export default {
   data() {
     return {
       name: null,
+      checkBox: [],
       email: null,
       message: null
+    }
+  },
+  methods: {
+    submit() {
+      this.$v.$touch()
+      // if its still pending or an error is returned do not submit
+      if (this.$v.$invalid) return
+      // to form submit after this
+      alert('Form submitted')
     }
   },
   validations: {
     name: {
       required
     },
+
     email: {
       required,
       email
     },
     message: {
       required
-    }
-  },
-  methods: {
-    submit() {
-      console.log('submit')
     }
   }
 }
@@ -116,7 +129,6 @@ textarea {
     border-bottom: 2px solid $main-color;
     margin-bottom: 4rem;
   }
-
   .input {
     display: block;
     width: 100%;

@@ -11,7 +11,7 @@
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
   text-transform: lowercase;
-  color: $main-color;
+  color: $ascending-color;
   font-weight: 900;
   text-align: center;
   text-decoration: none;
