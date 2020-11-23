@@ -3,26 +3,23 @@
     <div class="form-heading">
       <h1>Pisite nam</h1>
     </div>
-    <form method="POST" action="submit" @submit="submit()" class="input-form">
-      <div class="input-wrap validate-input" 
-      data-validate="Name is required"
-      >
+    <form method="POST" class="input-form" @submit.prevent="submit">
+      <div class="input-wrap validate-input" data-validate="Name is required.">
         <input 
           type="text" 
           class="input"
           name="name" 
-          placeholder="Name" 
-          v-model="name"
-          @input="$v.name.$touch"
+          placeholder="Ime i Prezime" 
+          v-model="$v.name.$model"
         />
         <div>
-          <span class="error" v-if="!$v.name.required && $v.name.$dirty" data-placeholder="NAME"></span>
+           <span class="error" v-if="!$v.name.required && $v.name.$dirty" data-placeholder="NAME"></span>
         </div>
       </div>
       <div class="input-wrap validate-input" data-validate="Valid email is required: ex@adc.xyz">
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email Adresa"
           class="input"
           name="email"
           autocomplete="off"
@@ -32,42 +29,76 @@
           <span class="error" v-if="!$v.email.required && $v.email.$dirty"   data-placeholder="EMAIL"></span>
         </div>
       </div>
+      <div class="checkbox validate-input">
+        <h4>Izaberite Smestaj:</h4>
+        <ul>
+          <li v-for="(feature, index) in features" :key="index">
+            <input type="checkbox" :value="feature" v-model="$v.selected.features.$model">
+            <label>{{feature}}</label>
+          </li>
+        </ul>
+      </div>
       <div class="input-wrap validate-input" data-validate="Message is required.">
         <textarea
           cols="30"
           rows="10"
-          placeholder="Message"
+          placeholder="Vasa poruka"
           class="input"
           name="message"
           v-model.trim="$v.message.$model"
         ></textarea>
-        <div>
+        <div>  
           <span class="error" data-placeholder="MESSAGE" v-if="!$v.message.required && $v.message.$dirty"></span>
         </div>
       </div>
+      <div class="error-message">
+        <p class="typo__p" v-if="submitStatus === 'OK'">Hvala</p>
+        <p class="typo__p" v-show="submitStatus === 'ERROR'">Molimo vas da popunite formular</p>
+      </div>
+      <button class="button" type="submit" :disabled="submitStatus ==='PENDING'">Posalji poruku</button>
       
-      <button class="button" type="send" >Posalji poruku</button>
     </form>
   </div>
 </template>
 <script>
 import { required, email } from 'vuelidate/lib/validators'
+import axios from 'axios'
 export default {
   data() {
     return {
       name: null,
-      checkBox: [],
       email: null,
-      message: null
+      message: null,
+      features: ['Smestaj Katarina', 'Smestaj Luka'],
+      submitStatus: null,
+      selected: {
+        features: []
+      }
     }
   },
   methods: {
     submit() {
+      const data = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+        selected: this.selected.features
+      }
+      console.log('Submit!')
       this.$v.$touch()
-      // if its still pending or an error is returned do not submit
-      if (this.$v.$invalid) return
-      // to form submit after this
-      alert('Form submitted')
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        console.log(data)
+        axios.post('submit', data, () => {
+          console.log('send')
+          console.log(data)
+        })
+        this.submitStatus = 'PENDING'
+        setTimeout(() => {
+          this.submitStatus = 'OK'
+        }, 500)
+      }
     }
   },
   validations: {
@@ -81,6 +112,11 @@ export default {
     },
     message: {
       required
+    },
+    selected: {
+      features: {
+        required
+      }
     }
   }
 }
@@ -122,11 +158,27 @@ textarea {
   @include media('<=phone') {
     width: 280px;
   }
-
+  .checkbox {
+    width: 100%;
+    margin-bottom: 2rem;
+    h4 {
+      padding: 1rem 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    li {
+      margin-right: 35px;
+    }
+  }
   .input-wrap {
     width: 100%;
     position: relative;
     border-bottom: 2px solid $main-color;
+
     margin-bottom: 4rem;
   }
   .input {
@@ -135,7 +187,6 @@ textarea {
     padding: 0.2rem;
     line-height: 1.2;
     color: $font-dark;
-    font-family: 'Montserrat';
     font-size: 17px;
   }
 
@@ -168,6 +219,11 @@ textarea {
 }
 
 /* ERROR INPUT STYLING */
+.error-message {
+  //padding: 1rem;
+  height: 35px;
+  transition: all 1s ease-in;
+}
 .error::before {
   content: 'This field is required!';
 

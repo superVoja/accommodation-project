@@ -2,12 +2,14 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
+const { body,validationResult } = require('express-validator');
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
+const { callbackPromise } = require('nodemailer/lib/shared')
 config.dev = !(process.env.NODE_ENV === 'production')
 
 async function start() {
@@ -37,6 +39,8 @@ async function start() {
     <p3>${req.body.name}</p>
     <h3>Email:</3>
     <p3>${req.body.email}</p>
+    <h3>Smestaj:</3>
+    <p3>${req.body.selected}</p>
     <h3>Poruka:</3>
     <p3>${req.body.message}</p>
     
@@ -66,7 +70,8 @@ async function start() {
   
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.redirect('/contact');
+    
+    
     
   });
   // Give nuxt middleware to express

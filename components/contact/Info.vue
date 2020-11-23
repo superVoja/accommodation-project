@@ -6,7 +6,7 @@
       </h4>
       <p>
         Slobodan Smestaj,
-        <br />Ive Andrica 36, 18230 Sokobanja,
+        <br />Kneza Miloša 2, 18230 Sokobanja,
         <br />Srbija
       </p>
     </div>
@@ -14,7 +14,13 @@
       <h4>
         <font-awesome-icon :icon="['fas', 'phone']" />Telefon:
       </h4>
-      <p>+381 62 123 456</p>
+
+      <div class="phone-content">
+        <p>Smestaj Katarina <br>
+      +381 62 123 456</p>
+      <p>Smestaj Luka <br>
+      +381 62 123 456</p>
+      </div>
     </div>
     <div class="email info">
       <h4>
@@ -70,6 +76,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 1rem;
+}
+.phone-content {
+  display: flex;
 }
 p {
   padding: 5px 2px;

@@ -62,6 +62,7 @@ module.exports = {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/dotenv',
+    '@nuxtjs/axios',
     [
       'storyblok-nuxt',
       { accessToken: '1IJHyouEUyPgq0VEYIGAnQtt', cacheProvider: 'memory' }
@@ -84,6 +85,19 @@ module.exports = {
     ]
   ],
 
+   /*
+  ** Axios
+  */
+
+  axios:{
+    baseURL: process.env.BASE_URL || 'http://localhost:3000/api'
+  },
+  /*
+  ** Server
+  */
+ server:{
+   port: process.env.PORT || 8000
+ },
   /*
   ** Build configuration
   */
