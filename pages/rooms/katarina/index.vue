@@ -3,8 +3,8 @@
     <div class="heading">
       <h1>Smestaj katarina</h1>
     </div>
-   <p>Sve smestajne jedinice smetaja Katarina mogu da koriste besplatan parking i WiFi</p>
-    <RoomList :rooms="loadedRooms"   />
+    <p>Sve smestajne jedinice smetaja Katarina mogu da koriste besplatan parking i WiFi</p>
+    <RoomList :rooms="loadedRooms" />
   </section>
 </template>
 <script>

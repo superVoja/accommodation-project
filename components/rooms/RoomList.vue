@@ -1,6 +1,6 @@
 <template>
   <section class="room-list">
-    <transition-group name="list" tag="ul" appear>
+    <transition-group name="list" class="list" tag="ul" appear>
     <RoomPreview
       v-for="room in rooms"
       :key="room.id"
@@ -35,6 +35,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 1rem;
+
+  .list {
+    margin: 0 auto;
+  }
 }
 .list-item {
   display: inline-block;
