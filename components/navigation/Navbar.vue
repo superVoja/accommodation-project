@@ -1,17 +1,28 @@
 <template>
   <nav class="navbar">
     <ul class="menu-nav">
-      
-        <nuxt-link tag="li" to="/about"><a>O nama</a></nuxt-link>
-        <nuxt-link tag="li" to="/rooms"><a>Smestaj</a></nuxt-link>
+
+        <nuxt-link tag="li" to="/about"><a>O nama</a></nuxt-link> 
+        <nuxt-link tag="li" to="/sokobanja"><a>Sokobanja</a></nuxt-link>
+        <nuxt-link tag="li" to="/medicine"><a>Zdravstvo</a></nuxt-link>
+        <nuxt-link tag="li" to="/rooms"><a>Smeštaj</a></nuxt-link>
         <nuxt-link tag="li"  to="/contact"><a>Kontakt</a></nuxt-link>
       
     </ul>
   </nav>
 </template>
 <script>
+import Dropdown from '@/components/navigation/Dropdown'
 export default {
-  name: 'navbar'
+  name: 'navbar',
+  components: {
+    Dropdown
+  },
+  data() {
+    return {
+      isOpen: false
+    }
+  }
 }
 </script>
 <style lang="scss">

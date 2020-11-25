@@ -1,8 +1,7 @@
 <template>
   <div class="logo">
     <nuxt-link to="/" class="brand">
-      Slobodan
-      <br />Smestaj
+      Smeštaj u Sokobanji
     </nuxt-link>
   </div>
 </template>
@@ -15,7 +14,7 @@
   font-weight: 900;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  //display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;

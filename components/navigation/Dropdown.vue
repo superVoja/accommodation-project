@@ -22,7 +22,17 @@ export default {
   props: ['title', 'items'],
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      items: [
+        {
+          title: 'Sokobanja',
+          link: '/sokobanja'
+        },
+        {
+          title: 'Zdravstvo',
+          link: '/medicine'
+        }
+      ]
     }
   }
 }

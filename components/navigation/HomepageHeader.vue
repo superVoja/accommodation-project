@@ -45,7 +45,7 @@ header {
   z-index: 99;
 
   .logo {
-    z-index: 999;
+    z-index: 99;
   }
 }
 .scrolling {

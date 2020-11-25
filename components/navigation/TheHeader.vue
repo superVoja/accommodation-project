@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-    <TheLogo class="logo" />
-    <Navbar class="navbar" /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
+    <TheLogo />
+    <Navbar /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </div>
 </template>
 <script>
@@ -25,14 +25,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+
   //height: 4.5rem;
-  //display: grid;
-  //grid-template-columns: 1fr 1fr;
-
   z-index: 99;
-
-  .logo {
-    z-index: 999;
-  }
 }
 </style>
