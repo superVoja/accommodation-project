@@ -47,11 +47,11 @@ async function start() {
     `;
 
     let transporter = nodemailer.createTransport({
-      host: "mail.vojislavsibinovic.com",
+      host: "mail.apartmaniusokobanji.rs",
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'test@vojislavsibinovic.com', // generated ethereal user
+        user: 'kontakt@apartmaniusokobanji.rs', // generated ethereal user
         pass: process.env.NODEMAILER_PASSWORD, // generated ethereal password
       },
       tls:{
@@ -61,10 +61,10 @@ async function start() {
   
     // send mail with defined transport object
     let info = transporter.sendMail({
-      from: '"Slobodan Smestaj 👻" test@vojislavsibinovic.com', // sender address
-      to: "vojislav.sibinovic@gmail.com", // list of receivers
+      from: '"Slobodan Smestaj 👻" kontakt@apartmaniusokobanji.rs', // sender address
+      to: "kontakt@apartmaniusokobanji.rs", // list of receivers
       subject: "Nova poruka", // Subject line
-      text: "Hello world?", // plain text body
+      text: "Nova poruka Apartmani u Sokobanji", // plain text body
       html: output, // html body
     });
   

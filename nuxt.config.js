@@ -65,7 +65,7 @@ module.exports = {
     '@nuxtjs/axios',
     [
       'storyblok-nuxt',
-      { accessToken: '1IJHyouEUyPgq0VEYIGAnQtt', cacheProvider: 'memory' }
+      { accessToken: 't5QxDrKzSPlZxusztTchjAtt', cacheProvider: 'memory' }
     ],
 
     [
@@ -90,7 +90,7 @@ module.exports = {
   */
 
   axios:{
-    baseURL: process.env.BASE_URL || 'http://localhost:3000/api'
+    baseURL: process.env.BASE_URL || 'http://localhost:3000/'
   },
   /*
   ** Server

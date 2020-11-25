@@ -1,15 +1,15 @@
 <template>
     <section>
      <div class="container">
- <div class="about">
-        <h2 class="about-heading">Naša priča</h2>
-        <div class="about-content">
-          <p class="about-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor aliquid explicabo labore eaque sint laudantium excepturi nisi error fuga, incidunt veniam repellendus corporis nam dolorem magni perspiciatis deserunt. Soluta quas minus numquam labore cupiditate dolorum rem dicta quidem assumenda adipisci!
-        </p>
-        <div class="image">
-          <img src="~/assets/images/gardan_0.jpg" alt="">
-        </div>
+        <div class="about" v-editable="blok">
+          <h2 class="about-heading">{{title}}</h2>
+          <div class="about-content">
+            <p class="about-text">
+            {{content}}
+          </p>
+          <div class="image">
+            <img src="~/assets/images/gardan_0.jpg" alt="">
+          </div>
         </div>
       </div>
      </div>
@@ -18,7 +18,32 @@
 <script>
 export default {
   name: 'about',
-  layout: 'default'
+  layout: 'default',
+  asyncData(context) {
+    return context.app.$storyapi
+      .get('cdn/stories/about/', {
+        version: context.isDev ? 'draft' : 'published'
+      })
+      .then(res => {
+        return {
+          blok: res.data.story.content,
+          title: res.data.story.content.title,
+          content: res.data.story.content.content,
+          imgOne: res.data.story.content.img_1
+        }
+      })
+  },
+  mounted() {
+    this.$storybridge.on(['input', 'published', 'change'], event => {
+      if (event.action == 'input') {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      } else {
+        window.location.reload()
+      }
+    })
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -59,12 +84,13 @@ export default {
     font-size: 16px;
     line-height: 1.6em;
     margin: 0 0 1.6em;
-    flex-basis: 60%;
+    flex-basis: 50%;
   }
 
   .image {
     max-width: 750px;
     flex-basis: 40%;
+    margin-left: 10%;
 
     img {
       width: 100%;

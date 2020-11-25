@@ -1,5 +1,5 @@
 <template>
-    <div id="room">
+    <div id="room" v-editable="blok">
       <div class="content">
         <h1>{{title}}</h1>
         <h3>Smestaj </h3>
@@ -27,29 +27,41 @@ export default {
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories/rooms/' + context.params.id, {
-        version: 'draft'
+        version: context.isDev ? 'draft' : 'published'
       })
       .then(res => {
         return {
+          blok: res.data.story.content,
           title: res.data.story.content.title,
           content: res.data.story.content.content,
           items: [
-            res.data.story.content.img_1,
-            res.data.story.content.img_2,
-            res.data.story.content.img_3,
-            res.data.story.content.img_4,
-            res.data.story.content.img_5,
-            res.data.story.content.img_6,
-            res.data.story.content.img_7,
-            res.data.story.content.img_8,
-            res.data.story.content.img_9,
-            res.data.story.content.img_10,
-            res.data.story.content.img_11,
-            res.data.story.content.img_12
+            res.data.story.content.image_1,
+            res.data.story.content.image_2,
+            res.data.story.content.image_3,
+            res.data.story.content.image_4,
+            res.data.story.content.image_5,
+            res.data.story.content.image_6,
+            res.data.story.content.image_7,
+            res.data.story.content.image_8,
+            res.data.story.content.image_9,
+            res.data.story.content.image_10,
+            res.data.story.content.image_11,
+            res.data.story.content.image_12
           ],
           index: null
         }
       })
+  },
+  mounted() {
+    this.$storybridge.on(['input', 'published', 'change'], event => {
+      if (event.action == 'input') {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      } else {
+        window.location.reload()
+      }
+    })
   },
   methods: {
     setIndex(index) {

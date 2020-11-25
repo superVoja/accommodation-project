@@ -98,6 +98,12 @@ export default {
         setTimeout(() => {
           this.submitStatus = 'OK'
         }, 500)
+
+        this.name = ''
+        this.email = ''
+        this.message = ''
+        this.selected.features = null
+        this.$v.$reset()
       }
     }
   },
