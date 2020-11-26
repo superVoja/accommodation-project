@@ -1,7 +1,8 @@
 <template>
   <div class="header">
     <TheLogo />
-    <Navbar /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
+    <Navbar />
+    <TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </div>
 </template>
 <script>
@@ -25,8 +26,12 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-
   //height: 4.5rem;
   z-index: 99;
+
+  @include media('<=tablet') {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 </style>

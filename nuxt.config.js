@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const axios = require('axios')
 
 module.exports = {
   mode: 'universal',
@@ -7,24 +8,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'Apartmani u Sokobanji',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'
-      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
@@ -115,4 +106,19 @@ module.exports = {
     name: 'fade',
     mode: 'out-in'
   },
+  generate:{
+    routes: function(){
+      return axios.get('https://api.storyblok.com/v1/cdn/stories?version=published&token=52FOiKNxeblxOUQMK3fZogtt&cv=' + Math.floor(Date.now() / 1e3)).then(res => {
+        const rooms = res.data.stories.map(bp => bp.full_slug)
+        return [
+          '/',
+          '/about',
+          '/sokobanja',
+          '/medicine',
+          '/rooms',
+          ...rooms
+        ]
+      })
+    }
+  }
 }

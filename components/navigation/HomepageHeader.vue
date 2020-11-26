@@ -1,7 +1,8 @@
 <template>
   <header  :class="{scrolling: scrollPosition > 100}">
     <TheLogo class="logo" />
-    <Navbar class="navbar" /><TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
+    <Navbar class="navbar" />
+    <TheMenuButton@toggle="$nuxt.$emit('menuToggle')" />
   </header>
 </template>
 <script>
@@ -46,6 +47,11 @@ header {
 
   .logo {
     z-index: 99;
+  }
+
+  @include media('<=tablet') {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 .scrolling {

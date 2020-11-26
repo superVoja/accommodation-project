@@ -1,7 +1,7 @@
 <template>
         <section>  
            <div class="heading">
-             <h1>Izaberite smestaj</h1>
+             <h1>Izaberite smeštaj</h1>
            </div>
            <div class="accommodations">
              <figure class="figure figure-katarina">
@@ -9,12 +9,12 @@
              <figcaption>
                <div>
                   <h2>
-               Smestaj
+               Smeštaj
                <span>Katarina</span>
              </h2>
              <p>Lorem ipsum dolor sit amet.</p>
                </div>
-               <nuxt-link to="/rooms/katarina">Vidi Smestaj</nuxt-link>
+               <nuxt-link to="/rooms/katarina">Vidi Smeštaj</nuxt-link>
              </figcaption>
            </figure>
            <figure class="figure figure-luka">
@@ -22,12 +22,12 @@
              <figcaption>
                <div>
                  <h2>
-               Smestaj
+               Smeštaj
                <span>Luka</span>
              </h2>
              <p>Lorem ipsum dolor sit amet.</p>
                </div>
-                <nuxt-link to="/rooms/luka">Vidi Smestaj </nuxt-link>
+                <nuxt-link to="/rooms/luka">Vidi Smeštaj </nuxt-link>
              </figcaption>
            </figure>
            </div>
@@ -51,7 +51,7 @@ section {
     padding-bottom: 1.2rem;
     position: relative;
     display: inline-block;
-    font-family: $ubuntu-font;
+    font-family: $lora-font;
     @include media('<=tablet') {
       font-size: 2rem;
     }

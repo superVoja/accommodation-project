@@ -37,6 +37,6 @@ section {
   @include media('<desktop') {
     grid-template-columns: 1fr;
   }
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 </style>

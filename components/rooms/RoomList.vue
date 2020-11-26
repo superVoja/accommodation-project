@@ -35,14 +35,21 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 1rem;
-
+  //margin: 0 auto;
   .list {
     margin: 0 auto;
   }
 }
 .list-item {
+  list-style: none;
   display: inline-block;
   margin-right: 10px;
+  @include media('<=tablet') {
+    display: block;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 .list-enter-active,
 .list-leave-active {

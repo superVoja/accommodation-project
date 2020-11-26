@@ -3,9 +3,9 @@
     <div id="main">
       <div class="overlay"></div>
       <div class="main-content">
-        <h1>Smestaj U Sokobanji</h1>
-        <h5>Smestaj u samom centru Sokobanje</h5>
-        <nuxt-link to="/contact">Rezervisi Smestaj</nuxt-link>
+        <h1>Apartmani u Sokobanji</h1>
+        <h5>Smeštaj u samom centru Sokobanje</h5>
+        <nuxt-link to="/contact">Rezerviši Smeštaj</nuxt-link>
       </div>
     </div>
     <div id="rooms">

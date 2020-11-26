@@ -28,14 +28,16 @@ export default {
 <style lang="scss" scoped>
 #menu-btn {
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  color: $font-light;
+  font-family: $ubuntu-font;
+  color: $ascending-color;
+
   button:focus {
     outline: none;
   }
@@ -43,9 +45,9 @@ export default {
   .burger-btn {
     position: relative;
     height: 30px;
-    width: 32px;
+    width: 42px;
     display: block;
-    z-index: 60;
+    z-index: 1000;
     border: 0;
     border-radius: 0;
     background-color: transparent;
@@ -53,7 +55,7 @@ export default {
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     .burger-bar {
-      background-color: $main-color;
+      background-color: $ascending-color;
       position: absolute;
       top: 50%;
       right: 6px;

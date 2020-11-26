@@ -7,10 +7,14 @@
         <TheLogo />
         <transition-group name="NAV" tag="ul" appear >
           
-            <nuxt-link tag="li"  v-for="(link, index) in links"
+            <nuxt-link 
+            tag="li"  
+            v-for="(link, index) in links"
             :key="link.title"
             :style="`--i: ${index}`"
-             :to="link.route"><a>{{ link.title }}</a></nuxt-link>
+            :to="link.route">
+            <a>{{ link.title }}</a>
+            </nuxt-link>
           
         </transition-group>
       </div>
@@ -33,9 +37,12 @@ export default {
   data() {
     return {
       links: [
-        { title: 'o nama', route: '/about' },
-        { title: 'smestaj', route: '/rooms' },
-        { title: 'kontakt', route: '/contact' }
+        { title: 'Početna', route: '/' },
+        { title: 'O nama', route: '/about' },
+        { title: 'Sokobanja', route: '/sokobanja' },
+        { title: 'Zdravstvo', route: '/medicine' },
+        { title: 'Smeštaj', route: '/rooms' },
+        { title: 'Kontakt', route: '/contact' }
       ]
     }
   }
@@ -55,7 +62,7 @@ export default {
 }
 
 .menu {
-  z-index: 100;
+  z-index: 10;
   height: 100vh;
   width: 100%;
   background-color: lighten($color: $main-color, $amount: 0.5);
@@ -82,6 +89,7 @@ export default {
     }
     a {
       color: $font-dark;
+      font-family: $ubuntu-font;
       text-decoration: none;
       display: block;
       margin-top: 2rem;

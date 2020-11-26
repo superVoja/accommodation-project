@@ -19,5 +19,9 @@
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
+
+  @include media('<=tablet') {
+    display: none;
+  }
 }
 </style>

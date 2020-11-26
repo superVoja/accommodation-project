@@ -5,7 +5,7 @@
         <font-awesome-icon :icon="['fas', 'map-marker-alt']" />Adresa:
       </h4>
       <p>
-        Slobodan Smestaj,
+        Apartmani u Sokobanji,
         <br />Kneza Miloša 2, 18230 Sokobanja,
         <br />Srbija
       </p>
@@ -16,17 +16,17 @@
       </h4>
 
       <div class="phone-content">
-        <p>Smestaj Katarina <br>
-      +381 62 123 456</p>
-      <p>Smestaj Luka <br>
-      +381 62 123 456</p>
+        <p>Smeštaj Katarina <br>
+      +381 63 887 18 51</p>
+      <p>Smeštaj Luka <br>
+      +381 63 247 221</p>
       </div>
     </div>
     <div class="email info">
       <h4>
         <font-awesome-icon :icon="['fas', 'envelope']" />Email:
       </h4>
-      <p>support@example.com</p>
+      <p>kontakt@apartmaniusokobanji.rs</p>
     </div>
     <div class="map info">
       <h4>Mapa:</h4>
@@ -64,6 +64,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: $ubuntu-font;
 
   @include media('<=phone') {
     border-right: none;

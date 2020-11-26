@@ -2,12 +2,12 @@
   <footer class="footer">
     <div class="rooms">
       <ul>
-        <span class="heading">Smestaj</span>
+        <span class="heading">Smeštaj</span>
         <li>
-          <nuxt-link to="/rooms/katarina">Smestaj Katarina</nuxt-link>
+          <nuxt-link to="/rooms/katarina">Smeštaj Katarina</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/rooms/luka">Smestaj Luka</nuxt-link>
+          <nuxt-link to="/rooms/luka">Smeštaj Luka</nuxt-link>
         </li>
       </ul>
     </div>
@@ -18,26 +18,29 @@
           <nuxt-link to="/about">O nama</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">O Sokobanji</nuxt-link>
+          <nuxt-link to="/sokobanja">O Sokobanji</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/medicine">Zdravstvo</nuxt-link>
         </li>
       </ul>
     </div>
     <div class="contact">
       <span class="heading">Kontakt</span>
       <p>
-        Solobodan smestaj
-        <br />Ulica: Ive Andrica 36
+        Apartmani u Sokobanji
+        <br />Ulica: Kneza Miloša 2,
         <br />Sokobanja, Srbija
       </p>
       <ul class="phone-list">
         <li>
-          <span>Smestaj Katarina</span>
-          <a href="#" class="non-hover">062 123 45 67</a>
+          <span>Smeštaj Katarina</span>
+          <a href="tel:+381638871851" class="non-hover">063 887 18 51</a>
         </li>
 
         <li>
-          <span>Smestaj Luka</span>
-          <a href="#" class="non-hover">062 123 45 67</a>
+          <span>Smeštaj Luka</span>
+          <a href="tel:+38163247221" class="non-hover">063 247 221</a>
         </li>
       </ul>
     </div>

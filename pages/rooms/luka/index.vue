@@ -1,9 +1,9 @@
 <template>
   <section>
     <div class="heading">
-      <h1>Smestaj Luka</h1>
+      <h1>Smeštaj Luka</h1>
     </div>
-    <p>Sve smestajne jedinice smetaja Luka mogu da koriste besplatan parking i WiFi</p>
+    <p>Sve smeštajne jedinice smeštaja Luka mogu da koriste besplatan parking i WiFi</p>
     <RoomList :rooms="loadedRooms" />
   </section>
 </template>
@@ -31,7 +31,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  padding-top: 8rem;
+  padding-top: 6rem;
 
   .heading {
     display: flex;
@@ -62,7 +62,9 @@ section {
   }
 
   p {
-    margin-top: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 300px;
     text-align: center;
   }
 }

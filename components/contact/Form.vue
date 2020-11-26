@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form">
     <div class="form-heading">
-      <h1>Pisite nam</h1>
+      <h1>Pišite nam</h1>
     </div>
     <form method="POST" class="input-form" @submit.prevent="submit">
       <div class="input-wrap validate-input" data-validate="Name is required.">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="checkbox validate-input">
-        <h4>Izaberite Smestaj:</h4>
+        <p>Izaberite Smeštaj:</p>
         <ul>
           <li v-for="(feature, index) in features" :key="index">
             <input type="checkbox" :value="feature" v-model="$v.selected.features.$model">
@@ -42,7 +42,7 @@
         <textarea
           cols="30"
           rows="10"
-          placeholder="Vasa poruka"
+          placeholder="Vaša poruka"
           class="input"
           name="message"
           v-model.trim="$v.message.$model"
@@ -52,10 +52,10 @@
         </div>
       </div>
       <div class="error-message">
-        <p class="typo__p" v-if="submitStatus === 'OK'">Hvala</p>
+        <p class="typo__p" v-if="submitStatus === 'OK'">Hvala Vam! Očekujte odgovor u najkraćem mogućem roku.</p>
         <p class="typo__p" v-show="submitStatus === 'ERROR'">Molimo vas da popunite formular</p>
       </div>
-      <button class="button" type="submit" :disabled="submitStatus ==='PENDING'">Posalji poruku</button>
+      <button class="button" type="submit" :disabled="submitStatus ==='PENDING'">Pošalji poruku</button>
       
     </form>
   </div>
@@ -69,7 +69,7 @@ export default {
       name: null,
       email: null,
       message: null,
-      features: ['Smestaj Katarina', 'Smestaj Luka'],
+      features: ['Smeštaj Katarina', 'Smeštaj Luka'],
       submitStatus: null,
       selected: {
         features: []
@@ -148,7 +148,7 @@ textarea {
   align-items: center;
 
   .form-heading {
-    font-family: 'Playfair Display';
+    font-family: $lora-font;
     font-size: 1.7rem;
     padding: 2rem;
   }
@@ -161,13 +161,14 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 490px;
+  font-family: $ubuntu-font;
   @include media('<=phone') {
     width: 280px;
   }
   .checkbox {
     width: 100%;
     margin-bottom: 2rem;
-    h4 {
+    p {
       padding: 1rem 0;
     }
     ul {

@@ -1,10 +1,11 @@
 <template>
   <section class="container">
     <div class="content">
-      <h2>Smestaj U Sokobanji</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, voluptatum? Dolores sint minima obcaecati praesentium distinctio? Ipsa commodi exercitationem expedita nisi hic eius facere sint officiis dolorem consequatur. Molestias, repellat.</p>
+      <h2>Apartmani u Sokobanji</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Optio, voluptatum? Dolores sint minima obcaecati praesentium distinctio? Ipsa commodi exercitationem expedita nisi hic eius facere sint officiis dolorem consequatur. Molestias, repellat.</p>
     <h2>Pogodnosti</h2>
-    <p>Sve smestajne jedinice</p>
+    <p>Sve smeštajne jedinice</p>
     <div class="amenities">
       <img src="@/assets/images/freeParking.png" alt="Free Parcking" title="Besplatan Parking">
       <img src="@/assets/images/freeWiFi.png" alt="Free WiFi" title="Besplatan WiFi">
@@ -42,7 +43,7 @@ export default {
 
   h2 {
     font-size: 2.3rem;
-    font-family: $ubuntu-font;
+    font-family: $lora-font;
     @include media('<=tablet') {
       font-size: 2rem;
     }

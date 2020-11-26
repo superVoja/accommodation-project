@@ -3,6 +3,9 @@
      <div class="container">
         <div class="about" v-editable="blok">
           <h2 class="about-heading">{{title}}</h2>
+          <h4>
+            Smeštaj Katarina i Luka toplo dočekuje od 2000. godine.
+          </h4>
           <div class="about-content">
             <p class="about-text">
             {{content}}
@@ -65,7 +68,7 @@ export default {
     max-width: 560px;
     margin: 1em 0 1.6em;
     color: $font-dark;
-    font-family: $ubuntu-font;
+    font-family: $lora-font;
 
     &:after {
       content: '';
@@ -75,12 +78,15 @@ export default {
       border-bottom: 3px solid $ascending-color;
     }
   }
+  h4 {
+    margin-bottom: 1rem;
+  }
   .about-content {
     display: flex;
   }
   .about-text {
     color: $font-dark;
-    font-family: $lora-font;
+    font-family: $ubuntu-font;
     font-size: 16px;
     line-height: 1.6em;
     margin: 0 0 1.6em;
@@ -94,6 +100,8 @@ export default {
 
     img {
       width: 100%;
+      border-radius: 6px 6px 6px 6px;
+      box-shadow: 0px 40px 50px -20px rgba(0, 0, 0, 0.35);
       //opacity: 0.8;
     }
   }
