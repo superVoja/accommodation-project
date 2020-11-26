@@ -85,6 +85,8 @@ export default {
     max-width: 750px;
     flex-basis: 40%;
     margin-left: 10%;
+    display: flex;
+    align-items: center;
 
     img {
       width: 100%;
