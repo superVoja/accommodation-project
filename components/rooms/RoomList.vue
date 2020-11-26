@@ -2,13 +2,14 @@
   <section class="room-list">
     <transition-group name="list" class="list" tag="ul" appear>
     <RoomPreview
-      v-for="room in rooms"
+      tag="li"
+      v-for="(room, index) in rooms"
       :key="room.id"
       :title="room.title"
-     :thumbnail="room.thumbnail"
+      :thumbnail="room.thumbnail"
       :id="room.id"
       class="list-item"
-      
+      :style="`--i:${index}`"
     />
     </transition-group>
   </section>
@@ -51,9 +52,12 @@ export default {
     margin-bottom: 10px;
   }
 }
-.list-enter-active,
+.list-enter-active {
+  transition: all calc(var(--i) * 0.4s) ease-in-out;
+  //transition-delay: 0.4s;
+}
 .list-leave-active {
-  transition: all 1s;
+  transition: all 3s ease-in-out;
 }
 .list-enter {
   opacity: 0;
