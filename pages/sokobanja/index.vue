@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
   max-width: 1360px;
   padding: 40px 20px;
   margin-left: auto;
@@ -60,6 +60,9 @@ export default {
 .content {
   padding-top: 6rem;
   display: flex;
+  @include media('<=phone') {
+    flex-direction: column;
+  }
 
   h1 {
     font-size: 40px;
@@ -82,6 +85,9 @@ export default {
     align-items: center;
     flex-basis: 40%;
     margin-left: 10%;
+    @include media('<=phone') {
+      margin: 20px auto;
+    }
 
     img {
       width: 100%;

@@ -62,7 +62,7 @@ export default {
 }
 
 .menu {
-  z-index: 10;
+  z-index: 60;
   height: 100vh;
   width: 100%;
   background-color: lighten($color: $main-color, $amount: 0.5);

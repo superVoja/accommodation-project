@@ -83,6 +83,12 @@ export default {
   }
   .about-content {
     display: flex;
+    @include media('<=tablet') {
+      //Tablet
+    }
+    @include media('<=phone') {
+      flex-direction: column;
+    }
   }
   .about-text {
     color: $font-dark;
@@ -97,7 +103,9 @@ export default {
     max-width: 750px;
     flex-basis: 40%;
     margin-left: 10%;
-
+    @include media('<=phone') {
+      margin: 0;
+    }
     img {
       width: 100%;
       border-radius: 6px 6px 6px 6px;

@@ -116,6 +116,19 @@
   }
   @include media('<=phone') {
     grid-template-columns: 1fr;
+    padding: 25px 0;
+  }
+
+  .about {
+    @include media('<=phone') {
+      display: none;
+    }
+  }
+
+  .rooms {
+    @include media('<=phone') {
+      display: none;
+    }
   }
 }
 

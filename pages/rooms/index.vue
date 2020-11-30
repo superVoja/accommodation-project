@@ -46,6 +46,7 @@ export default {
     font-family: $lora-font;
     @include media('<=tablet') {
       font-size: 2rem;
+      text-align: center;
     }
   }
   p {
