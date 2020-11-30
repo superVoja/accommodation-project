@@ -70,10 +70,10 @@ export default {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 30px;
+  //padding: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
 
   ul {
@@ -85,7 +85,7 @@ export default {
 
     li {
       padding-top: 0.5rem;
-      text-align: right;
+      text-align: center;
     }
     a {
       color: $font-dark;
@@ -97,6 +97,7 @@ export default {
       font-weight: bolder;
       text-transform: uppercase;
       cursor: pointer;
+      text-align: center;
     }
   }
 }
