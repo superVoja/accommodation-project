@@ -4,10 +4,17 @@
         <div class="content">
             <div>
                 <h1>Sokobanja Zeleno Srce srbije</h1>
-                    <p>Jedno od najposećenijih turističkih mesta u Srbiji je Sokobanja. Smeštena je u sokobanjskoj kotlini na 400 m. nadmorske visine. Kroz Sokobanju protiče reka Moravica. Severno od Sokobanje nalazi se planina Rtanj (1655m), a južno Ozren (1174m), i Devica (1187m), koje su bogate šumom i lekovitim travama. Na lokalitetu Sokobanje nađene su iskopine iz doba neolita i rikske grobnice iz I i II veka. Na rimskim temeljima Turci su podigli amam - prvi i najstariji objekat za lečenje u Sokobanji. Amam je obnovljen odlukom knjaza Miloša 1833. godine. U to vreme u Srbiji je bilo 10 lekara i farmaceuta. U Sokobanji je stalno radio dr.Đoka Novaković - "Pokrštenjak".
-                    Kroz vekove Sokobanja menja svoj naziv: zvala se Balnea, Banja, Velika Banja, Akelksinačka Banja, Sokol Banja, a od 1859 godine dobila je ime sokobanja po istorijskom gradu Sokogradu ( srušen 1416 godine).
-                    Kao prirodno lečilište Sokobanja poznata je još od doba Rimljana, a prvi pisani podaci o njenoj lekovitosti datiraju iz 1413 god. Konstantin Filozof, 1658 god. Hadži Kalfa, 1663 god. Elvija Celebija, 1737 god. Grof Smetans, a pišu i Vuk Karadžić i Felix Kanić.
-                    Umirujuće dejstvo kontinentalne klime, visoka koncentracija kiseonika, ozona i negativnih jona u vazduhu, odsustvo aero zagađenja, malo magle i vetrovitih dana uz povoljan atmosferski pritisak i umerene padavine, prisustvo spelcifičnih elemenata u vazduhu i oligomineralnim vodama (temperature od 28C do 45C koje se koriste za kupanje i inhalacije, uslovi su da Sokobanja predstavlja idealno mesto za banjsko - klimatski tretman različitih bolesti i stanja. Zbog toga je specijalna bolnica "SOKOBANJA" izgrađena baš na ovom mestu. Ova bolnica je naučno nastavna baza pri medicinskom fakultetu u Nišu i jedina ustanova u Sokobanji koja ima odobrenje  Ministarstva Zdravlja za primenu prirodnih faktora u lečenju.</p>
+                <h3>Odgovori na večito pitanje, šta je to u Sokobanji što pozitivno utiče na naše zdravlje, stvarnost ili zabluda?</h3>
+                    <p>Mnogi su bili u Sokobanji, mnogi nisu, ali ogromna većina ljudi u Srbiji  zna za Sokobanju zahvaljujući ovoj Nušićevoj krilatici. Ostaje pitanje, šta je to navelo Nušića da napiše ovakav tekst, da li je on stvarno imao osećaj da ga boravak u Sokobanji podmlaćuje i zašto? Činjenica je da veliki broj gostiju u Sokobanji navodi da ima isti osećaj nakon boravka u Sokobanji, da se osećaju svežije, da imaju više snage i energije, da su im zdravstvene tegobe manje ili potpuno nestale, jednostavno da im je boravak jako prijao. Veliki broj plućnih bolesnika navodi da nakon boravka u Sokobanji, provedu celu zimu bez većih zdravstvenih problema, dok u slučajevima kada preskoče da dođu u Sokobanju budu u nekoliko navrata u bolnici zbog pogoršanja. Ne treba ni pričati o broju dece kojima je boravak u Sokobanji pomogao da eliminišu svoje tegobe sa disanjem. Koliko je taj klimatski faktor značajan govori i činjenica da je na teritoriji opštine Sokobanja davne 1934.g. započeta gradnja Sanatorijuma Ozren, a u cilju lečenja obolelih od tuberkuloze pluća. Tada je formirana specijalna komisija sastavljena od vrhunskih lekara tog doba iz Austrije i Jugoslavije čiji je zadatak bio da na području stare Jugoslavije nađe destinaciju koja ima klimatske uslove slične Davosu u Švajcarskoj. Posle višegodišnjeg rada izbor je bio Ozren, u Sokobanji. Razloga ima na pretek, ali prvo nešto malo o Sokobanji.</p>
+                    <p>
+                      Sokobanja je mesto na nadmorskoj visini od oko 400 metara, nalazi se u Sokobanjskoj kotlini oivičena planinskim vencima sa svih strana. Izložena je delovanju dveju važnih vazdušnih struja, sa jedne strane iz Timočke krajine i Karpata, a sa druge iz Pomoravlja. Njihovo međusobno delovanje jako utiče na klimatske prilike u Sokobanji. U svakom  slučaju, mnogim ljudima, pre svega plućnim bolesnicima boravak u Sokobanji jako prija, te se zbog toga i beleži visoka posećenost Sokobanje. U prošlom veku Sokobanju su uglavnom posećivali bolesnici tražeći lek za svoje zdravstvene probleme, penzioneri u želji da sačuvaju i unaprede svoje zdravlje. U novije doba se situacija delom menja sa činjenicom da Sokobanju posećuje sve veći broj mladih i zdravih ljudi sa željom da  boravkom u njoj preveniraju potencijalne zdravstvene probleme u budućnosti, da unaprede svoje zdravstveno stanje, da uživaju u turističkim potencijalima Sokobanje i njenoj ponudi ( spa i wellnes turizam,aqua park,turističko ugostiteljski sadržaji).  Ovogodišnja rekordna posećenost Sokobanje pokazuje da su njeni potencijali ogromni, priroda je bila izdašna prema Sokobanji, ostaje da Sokobanjčani urade sve što je u njihovoj mogućnosti da se taj prirodni potencijal iskoristi.
+                      Na kraju ovog prvog dela teksta samo informacija da ćemo probati da damo odgovor na sva ova pitanja, ali želimo da ova priča bude interaktivna sa ljudima koji posećuju i vole Sokobanju, da nam prenesu svoje utiske i iskustva i da daju svoje mišljenje o pomenutoj temi. U narednim tekstovima, koje ćemo objavljivati jednom nedeljno probaćemo da damo odgovor na gore zadata pitanja a svako dobronameran može da se uključi u dijalog koji kao krajnji cilj ima da se unaprede turistički potencijali Sokobanje.
+
+
+                     <span>
+                       dr Milovan Šarović - specijalista za bolesti pluća
+                     </span>
+                    </p>
             </div>
             <div class="image">
                 <img src="~/assets/images/sokobanja.jpg" alt="Sokobanja Coat of Arms">
@@ -68,19 +75,38 @@ export default {
     font-size: 40px;
     line-height: 1em;
     max-width: 560px;
-    margin: 1em 0 1.6em;
+
     color: #000;
     font-family: 'Lora', serif;
+    position: relative;
+    padding: 1rem 0;
+    &::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      border-radius: 15px;
+      background-color: $ascending-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   p {
     max-width: 600px;
+    line-height: 1.7;
   }
   h3 {
     padding: 2rem 0;
   }
+  span {
+    display: block;
+    padding: 1rem 0;
+    font-weight: 900;
+    font-style: italic;
+  }
   .image {
-    max-width: 750px;
+    //max-width: 750px;
     display: flex;
     align-items: center;
     flex-basis: 40%;

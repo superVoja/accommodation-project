@@ -39,6 +39,7 @@
           @click="center = item.position"
         />
       </gmap-map> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1114964079356!2d21.873338715777148!3d43.64584856092354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47543a5411af944d%3A0x3bd6a519e7f1bd65!2sKneza%20Milo%C5%A1a%202%2C%20Sokobanja!5e0!3m2!1sen!2srs!4v1612781568354!5m2!1sen!2srs" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </div>
 </template>
