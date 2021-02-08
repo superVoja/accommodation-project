@@ -39,7 +39,7 @@ module.exports = {
   */
   css: ['~/assets/scss/main.scss', '~/assets/scss/colors.scss'],
   styleResources: {
-    scss: ['./assets/scss/*.scss', '~assets/scss/_mixins.scss']
+    scss: ['./assets/scss/*.scss', '~assets/scss/_mixins.scss', 'mathsass']
   },
 
   /*
