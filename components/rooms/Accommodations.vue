@@ -12,7 +12,7 @@
                Smeštaj
                <span>Katarina</span>
              </h2>
-             <p>Lorem ipsum dolor sit amet.</p>
+             <p>Dobrodošli</p>
                </div>
                <nuxt-link to="/rooms/katarina">Vidi Smeštaj</nuxt-link>
              </figcaption>
@@ -25,7 +25,7 @@
                Smeštaj
                <span>Luka</span>
              </h2>
-             <p>Lorem ipsum dolor sit amet.</p>
+             <p>Dobrodošli</p>
                </div>
                 <nuxt-link to="/rooms/luka">Vidi Smeštaj </nuxt-link>
              </figcaption>
