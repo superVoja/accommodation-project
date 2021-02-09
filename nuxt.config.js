@@ -39,7 +39,7 @@ module.exports = {
   */
   css: ['~/assets/scss/main.scss', '~/assets/scss/colors.scss'],
   styleResources: {
-    scss: ['./assets/scss/*.scss', '~assets/scss/_mixins.scss']
+    scss: ['./assets/scss/*.scss', '~assets/scss/_mixins.scss', 'mathsass']
   },
 
   /*
@@ -56,7 +56,7 @@ module.exports = {
     '@nuxtjs/axios',
     [
       'storyblok-nuxt',
-      { accessToken: process.env.NODE_ENV === 'production' ? '52FOiKNxeblxOUQMK3fZogtt' : 't5QxDrKzSPlZxusztTchjAtt', cacheProvider: 'memory' }
+      { accessToken: process.env.NODE_ENV === 'production' ? 'xudQFPuUlYz0BeEWDmLSYwtt' : 'FCFBhZQU1W5Cl38Yzaql0Qtt', cacheProvider: 'memory' }
     ],
 
     [
@@ -108,7 +108,7 @@ module.exports = {
   },
   generate:{
     routes: function(){
-      return axios.get('https://api.storyblok.com/v1/cdn/stories?version=published&token=52FOiKNxeblxOUQMK3fZogtt&cv=' + Math.floor(Date.now() / 1e3)).then(res => {
+      return axios.get('https://api.storyblok.com/v1/cdn/stories?version=published&token=xudQFPuUlYz0BeEWDmLSYwtt&cv=' + Math.floor(Date.now() / 1e3)).then(res => {
         const rooms = res.data.stories.map(bp => bp.full_slug)
         return [
           '/',

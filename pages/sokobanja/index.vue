@@ -80,15 +80,12 @@ export default {
     font-family: 'Lora', serif;
     position: relative;
     padding: 1rem 0;
-    &::after {
+    &:after {
       content: '';
-      width: 50px;
-      height: 3px;
-      border-radius: 15px;
-      background-color: $ascending-color;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      display: block;
+      width: 60px;
+      margin: 15px 0 0;
+      border-bottom: 3px solid $ascending-color;
     }
   }
 
