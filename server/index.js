@@ -52,7 +52,7 @@ async function start() {
       secure: false, // true for 465, false for other ports
       auth: {
         user: 'kontakt@apartmaniusokobanji.rs', // generated ethereal user
-        pass: process.env.NODEMAILER_PASSWORD, // generated ethereal password
+        pass: "slobodansmestaj", // generated ethereal password
       },
       tls:{
         rejectUnauthorized: false
