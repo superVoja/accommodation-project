@@ -48,8 +48,8 @@ async function start() {
 
     let transporter = nodemailer.createTransport({
       host: "mail.apartmaniusokobanji.rs",
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      port: 587,
+      secure: false, // true for 465, false for other ports
       auth: {
         user: 'kontakt@apartmaniusokobanji.rs', // generated ethereal user
         pass: process.env.NODEMAILER_PASSWORD, // generated ethereal password
