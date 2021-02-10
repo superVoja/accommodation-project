@@ -89,11 +89,13 @@ export default {
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR'
       } else {
-        console.log(data)
-        axios.post('server/submit', data, () => {
-          console.log('send')
-          console.log(data)
-        })
+        axios
+          .post('server/submit', data, () => {
+            console.log('send')
+          })
+          .catch(e => {
+            console.log(e)
+          })
         this.submitStatus = 'PENDING'
         setTimeout(() => {
           this.submitStatus = 'OK'
