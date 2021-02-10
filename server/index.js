@@ -32,7 +32,7 @@ async function start() {
   app.use(bodyParser.json());
  
 
-  app.post('/submit', (req, res) =>{
+  app.post('/server/submit', (req, res) =>{
     output = `
 
     <h3>Nova Poruka od:</3>
