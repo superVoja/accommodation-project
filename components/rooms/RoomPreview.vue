@@ -3,7 +3,7 @@
     <div class="card" :style="{ backgroundImage: 'url(' + thumbnail + ')' }">
       <div class="content">
         <h2 class="title">{{title}}</h2>
-        <p class="copy">Lorem ipsum dolor sit amet.</p>
+        <p class="preview-text">{{previewText}}</p>
       </div>
     </div>
   </nuxt-link>
@@ -22,6 +22,10 @@ export default {
     thumbnail: {
       type: String,
       required: true
+    },
+    previewText: {
+      type: String,
+      required: true
     }
   }
 }
@@ -33,6 +37,7 @@ a {
 }
 .card {
   height: 350px;
+  min-width: 180px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -84,6 +89,11 @@ a {
 
     .title {
       font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .preview-text {
+      font-size: 1rem;
       font-weight: bold;
       line-height: 1.2;
     }

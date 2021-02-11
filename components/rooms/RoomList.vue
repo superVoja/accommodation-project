@@ -10,6 +10,7 @@
       :id="room.id"
       class="list-item"
       :style="`--i:${index}`"
+      :previewText="room.previewText"
     />
     </transition-group>
   </section>
@@ -35,8 +36,6 @@ export default {
   padding-bottom: 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-gap: 1rem;
-  //margin: 0 auto;
   .list {
     margin: 0 auto;
   }

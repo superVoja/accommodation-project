@@ -22,7 +22,8 @@ export default {
           return {
             id: bp.slug,
             title: bp.content.title,
-            thumbnail: bp.content.thumbnail
+            thumbnail: bp.content.thumbnail,
+            previewText: bp.content.preview_text
           }
         })
     }
