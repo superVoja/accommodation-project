@@ -97,6 +97,7 @@ export default {
     line-height: 1.6em;
     margin: 0 0 1.6em;
     flex-basis: 50%;
+    white-space: pre-line;
   }
 
   .image {
