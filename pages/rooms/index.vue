@@ -43,7 +43,6 @@ export default {
 
   h2 {
     font-size: 2.3rem;
-    font-family: $lora-font;
     @include media('<=tablet') {
       font-size: 2rem;
       text-align: center;

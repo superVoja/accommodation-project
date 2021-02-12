@@ -65,7 +65,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $ubuntu-font;
 
   @include media('<=phone') {
     border-right: none;

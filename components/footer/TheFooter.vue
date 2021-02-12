@@ -74,7 +74,6 @@
   padding: 25px 40px;
   text-align: center;
   color: $font-light;
-  font-family: $ubuntu-font;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

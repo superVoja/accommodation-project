@@ -55,13 +55,11 @@ export default {
   }
   .main-content {
     color: $font-light;
-    font-family: $lora-font;
     z-index: 10;
     text-align: center;
 
     h1 {
       color: $font-light;
-      font-family: $ubuntu-font;
       letter-spacing: 4px;
       line-height: 1.5;
       text-transform: uppercase;
@@ -77,11 +75,10 @@ export default {
       font-weight: 500;
       padding-top: 2rem;
       padding-bottom: 2rem;
-      font-family: $ubuntu-font;
     }
     a {
       color: $font-dark;
-      font-family: $ubuntu-font;
+
       text-decoration: none;
       border-color: $ascending-color;
       background-color: $ascending-color;

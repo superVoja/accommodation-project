@@ -35,7 +35,6 @@ export default {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  font-family: $ubuntu-font;
   color: $ascending-color;
 
   button:focus {

@@ -7,7 +7,6 @@
 </template>
 <style lang="scss" scoped>
 .brand {
-  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
   text-transform: lowercase;
   color: $ascending-color;

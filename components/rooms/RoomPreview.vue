@@ -1,11 +1,15 @@
 <template>
   <nuxt-link :to="id" tag="li"  >
-    <div class="card" :style="{ backgroundImage: 'url(' + thumbnail + ')' }">
-      <div class="content">
-        <h2 class="title">{{title}}</h2>
-        <p class="preview-text">{{previewText}}</p>
-      </div>
-    </div>
+    <figure class="" :style="{ backgroundImage: 'url(' + thumbnail + ')' }">
+						<figcaption>
+							<div>
+								<h2>{{title}}</h2>
+								<p>{{previewText}}</p>
+							</div>
+							
+						</figcaption>			
+					</figure>
+    
   </nuxt-link>
 </template>
 <script>
@@ -31,72 +35,109 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-a {
-  text-decoration: none;
-  color: $font-dark;
-}
-.card {
-  height: 350px;
-  min-width: 180px;
+figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  height: 360px;
+  width: 48%;
+
+  text-align: center;
+  cursor: pointer;
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  color: whitesmoke;
-  background-color: whitesmoke;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 
-  &::after {
+  &::before {
     content: '';
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%;
-    pointer-events: none;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(25, 61, 78, 1) 0,
-      rgba(23, 54, 69, 0) 100%
-    );
-    transform: translateY(-50%);
-    transition: transform calc(var(--d) * 2) var(--e);
+    height: 100%;
+    background: rgba($color: $main-color, $alpha: 0.4);
   }
-  &:hover,
-  &:focus {
-    transform: scale3d(1.006, 1.006, 1);
 
-    &::after {
-      opacity: 1;
+  &:hover h2 {
+    color: #fff;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  }
+
+  &:hover figcaption::before,
+  &:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  // img {
+  //   position: relative;
+  //   display: block;
+  //   min-height: 100%;
+  //   max-width: 100%;
+  //   opacity: 0.8;
+  // }
+  figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: -webkit-linear-gradient(
+        top,
+        rgba(72, 76, 97, 0) 0%,
+        rgba(72, 76, 97, 0.8) 75%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(72, 76, 97, 0) 0%,
+        rgba(72, 76, 97, 0.8) 75%
+      );
+      content: '';
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+      transform: translate3d(0, 50%, 0);
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
     }
   }
-
-  .content {
-    font-family: $ubuntu-font;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
-    padding: 1rem;
-    transition: all 1s ease-in-out;
-
-    .title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-    .preview-text {
-      font-size: 1rem;
-      font-weight: bold;
-      line-height: 1.2;
-    }
+    color: $secondary-color;
+    -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
   }
 }
 </style>

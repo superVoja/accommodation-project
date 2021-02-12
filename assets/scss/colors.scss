@@ -9,5 +9,8 @@ $font-light: #fff;
 $error-color: #c80000;
 
 /* FONTS */
-$lora-font: 'Lora', serif;
-$ubuntu-font: 'Ubuntu', sans-serif;
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  src: url('~assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}

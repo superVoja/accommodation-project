@@ -75,7 +75,6 @@ export default {
     max-width: 560px;
     margin: 1em 0 1.6em;
     color: $font-dark;
-    font-family: $lora-font;
 
     &:after {
       content: '';
@@ -100,7 +99,7 @@ export default {
     }
     p {
       color: $font-dark;
-      font-family: $ubuntu-font;
+
       font-size: 16px;
       line-height: 1.6em;
       margin: 0 0 1.6em;

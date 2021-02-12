@@ -89,7 +89,6 @@ export default {
     }
     a {
       color: $font-dark;
-      font-family: $ubuntu-font;
       text-decoration: none;
       display: block;
       margin-top: 2rem;

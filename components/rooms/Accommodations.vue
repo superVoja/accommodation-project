@@ -51,7 +51,6 @@ section {
     padding-bottom: 1.2rem;
     position: relative;
     display: inline-block;
-    font-family: $lora-font;
     @include media('<=tablet') {
       font-size: 2rem;
     }

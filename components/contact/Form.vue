@@ -150,7 +150,6 @@ textarea {
   align-items: center;
 
   .form-heading {
-    font-family: $lora-font;
     font-size: 1.7rem;
     padding: 2rem;
   }
@@ -163,7 +162,6 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 490px;
-  font-family: $ubuntu-font;
   @include media('<=phone') {
     width: 280px;
   }
