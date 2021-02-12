@@ -1,21 +1,23 @@
 <template>
     <section>
-     <div class="container">
-        <div class="about" v-editable="blok">
-          <h2 class="about-heading">{{title}}</h2>
-          <h4>
-            Smeštaj Katarina i Luka toplo dočekuje od 2000. godine.
-          </h4>
-          <div class="about-content">
-            <p class="about-text">
-            {{content}}
-          </p>
-          <div class="image">
-            <img src="~/assets/images/gardan_0.jpg" alt="">
+      <div class="container">
+          <div class="about" v-editable="blok">
+            <div class="about-heading">
+              <h1>{{heading}}</h1>
+            <h3>
+              {{subheadingOne}}
+            </h3>
+            </div>
+            <div class="about-content">
+              <p>
+              {{textOne}}
+            </p>
+            <div class="image" :style="{ backgroundImage: 'url(' + imageOne + ')' }">
+              
+            </div>
           </div>
         </div>
       </div>
-     </div>
     </section>
 </template>
 <script>
@@ -30,9 +32,13 @@ export default {
       .then(res => {
         return {
           blok: res.data.story.content,
-          title: res.data.story.content.title,
-          content: res.data.story.content.content,
-          imgOne: res.data.story.content.img_1
+          heading: res.data.story.content.main_heading,
+          subheadingOne: res.data.story.content.subheading_one,
+          textOne: res.data.story.content.text_one,
+          imageOne: res.data.story.content.image_one,
+          subheadingTwo: res.data.story.content.subheading_two,
+          textTwo: res.data.story.content.text_two,
+          imageTwo: res.data.story.content.image_two
         }
       })
   },
@@ -106,12 +112,6 @@ export default {
     margin-left: 10%;
     @include media('<=phone') {
       margin: 0;
-    }
-    img {
-      width: 100%;
-      border-radius: 6px 6px 6px 6px;
-      box-shadow: 0px 40px 50px -20px rgba(0, 0, 0, 0.35);
-      //opacity: 0.8;
     }
   }
 }

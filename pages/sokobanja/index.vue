@@ -1,6 +1,6 @@
 <template>
     <section>
-     <div class="container">
+    <div class="container">
         <div class="about" v-editable="blok">
           <div class="about-heading">
             <h1>{{heading}}</h1>

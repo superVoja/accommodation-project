@@ -2,15 +2,17 @@
     <section>
      <div class="container">
         <div class="about" v-editable="blok">
-          <h2 class="about-heading">{{title}}</h2>
-          <h4>
-            Smeštaj Katarina i Luka toplo dočekuje od 2000. godine.
-          </h4>
+          <div class="about-heading">
+            <h1>{{heading}}</h1>
+          <h3>
+            {{subheadingOne}}
+          </h3>
+          </div>
           <div class="about-content">
-            <p class="about-text">
-            {{content}}
+            <p>
+            {{textOne}}
           </p>
-          <div class="image">
+          <div class="image" :style="{ backgroundImage: 'url(' + imageOne + ')' }">
             
           </div>
         </div>
@@ -30,9 +32,13 @@ export default {
       .then(res => {
         return {
           blok: res.data.story.content,
-          title: res.data.story.content.title,
-          content: res.data.story.content.content,
-          imgOne: res.data.story.content.img_1
+          heading: res.data.story.content.main_heading,
+          subheadingOne: res.data.story.content.subheading_one,
+          textOne: res.data.story.content.text_one,
+          imageOne: res.data.story.content.image_one,
+          subheadingTwo: res.data.story.content.subheading_two,
+          textTwo: res.data.story.content.text_two,
+          imageTwo: res.data.story.content.image_two
         }
       })
   },
@@ -49,6 +55,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .container {
   width: 100%;
@@ -58,11 +65,12 @@ export default {
   margin-right: auto;
   box-sizing: border-box;
 }
-
 .about {
-  padding: 6rem 0;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
 
-  .about-heading {
+  h1 {
     font-size: 40px;
     line-height: 1em;
     max-width: 560px;
@@ -78,9 +86,11 @@ export default {
       border-bottom: 3px solid $ascending-color;
     }
   }
-  h4 {
+  h3 {
     margin-bottom: 1rem;
+    max-width: 560px;
   }
+
   .about-content {
     display: flex;
     @include media('<=tablet') {
@@ -89,29 +99,24 @@ export default {
     @include media('<=phone') {
       flex-direction: column;
     }
-  }
-  .about-text {
-    color: $font-dark;
-    font-family: $ubuntu-font;
-    font-size: 16px;
-    line-height: 1.6em;
-    margin: 0 0 1.6em;
-    flex-basis: 50%;
-    white-space: pre-line;
-  }
-
-  .image {
-    max-width: 750px;
-    flex-basis: 40%;
-    margin-left: 10%;
-    @include media('<=phone') {
-      margin: 0;
+    p {
+      color: $font-dark;
+      font-family: $ubuntu-font;
+      font-size: 16px;
+      line-height: 1.6em;
+      margin: 0 0 1.6em;
+      flex-basis: 50%;
+      white-space: pre-line;
     }
-    img {
-      width: 100%;
-      border-radius: 6px 6px 6px 6px;
-      box-shadow: 0px 40px 50px -20px rgba(0, 0, 0, 0.35);
-      //opacity: 0.8;
+    .image {
+      max-width: 750px;
+      flex-basis: 40%;
+      margin-left: 10%;
+      background-size: cover;
+      background-position: center;
+      @include media('<=phone') {
+        margin: 0;
+      }
     }
   }
 }

@@ -90,7 +90,7 @@ export default {
         this.submitStatus = 'ERROR'
       } else {
         axios
-          .post('server/submit', data, () => {
+          .post('/submit', data, () => {
             console.log('send')
           })
           .catch(e => {
