@@ -64,11 +64,12 @@ export default {
   margin-right: auto;
   box-sizing: border-box;
 }
-
 .about {
-  padding: 6rem 0;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
 
-  .about-heading {
+  h1 {
     font-size: 40px;
     line-height: 1em;
     max-width: 560px;
@@ -83,9 +84,11 @@ export default {
       border-bottom: 3px solid $ascending-color;
     }
   }
-  h4 {
+  h3 {
     margin-bottom: 1rem;
+    max-width: 560px;
   }
+
   .about-content {
     display: flex;
     @include media('<=tablet') {
@@ -94,22 +97,23 @@ export default {
     @include media('<=phone') {
       flex-direction: column;
     }
-  }
-  .about-text {
-    color: $font-dark;
-    font-size: 16px;
-    line-height: 1.6em;
-    margin: 0 0 1.6em;
-    flex-basis: 50%;
-    white-space: pre-line;
-  }
-
-  .image {
-    max-width: 750px;
-    flex-basis: 40%;
-    margin-left: 10%;
-    @include media('<=phone') {
-      margin: 0;
+    p {
+      color: $font-dark;
+      font-size: 16px;
+      line-height: 1.6em;
+      margin: 0 0 1.6em;
+      flex-basis: 50%;
+      white-space: pre-line;
+    }
+    .image {
+      max-width: 750px;
+      flex-basis: 40%;
+      margin-left: 10%;
+      background-size: cover;
+      background-position: center;
+      @include media('<=phone') {
+        margin: 0;
+      }
     }
   }
 }
